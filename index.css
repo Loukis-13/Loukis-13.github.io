@@ -1,0 +1,62 @@
+body {
+    text-align: center;
+}
+
+.cabeçalho {
+    height: 700px;
+}
+
+.cabeçalho * {
+    margin: 10px;
+}
+
+.cabeçalho h1, h2 {
+    color: white;
+    margin: 0%;
+    padding: 30px;
+}
+
+.cabeçalho h1 {
+    padding-top: 100px;
+}
+
+.cabeçalho div {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.cabeçalho div img {
+    height: 100px;
+    width: 100px;
+}
+
+.bloco {
+    height: 500px;
+    position: relative;
+}
+
+.slider-alt {
+    height: 440px;
+    width: 730px;
+    top: 40px;
+    left: 100px;
+}
+
+.texto {
+    right: 6%;
+    position: absolute;
+    top: 10%;
+}
+
+h5 {
+    overflow: auto;
+    width: 800px;
+    white-space: pre-line;
+}
+
+.leitor {
+    top: 10%;
+    left: -25%;
+    position: relative;
+}
