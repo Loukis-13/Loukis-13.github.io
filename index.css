@@ -1,5 +1,16 @@
 body {
     text-align: center;
+    font-family: 'KoHo', sans-serif;
+}
+
+.nav-wrapper img{
+    height: 60px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+#nav-mobile{
+    height: 60px;
 }
 
 .cabeçalho {
@@ -14,10 +25,6 @@ body {
     color: white;
     margin: 0%;
     padding: 30px;
-}
-
-.cabeçalho h1 {
-    padding-top: 100px;
 }
 
 .cabeçalho div {
@@ -50,7 +57,7 @@ body {
 }
 
 h5 {
-    overflow: auto;
+    overflow: hidden;
     width: 800px;
     white-space: pre-line;
 }
