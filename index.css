@@ -1,6 +1,8 @@
 body {
     text-align: center;
     font-family: 'KoHo', sans-serif;
+    overflow-x: hidden; 
+    width: 100%;
 }
 
 .nav-wrapper img{
@@ -14,7 +16,9 @@ body {
 }
 
 .cabeçalho {
-    height: 700px;
+    height: auto;
+    overflow: auto;
+    overflow-x: hidden;
 }
 
 .cabeçalho * {
@@ -34,21 +38,10 @@ body {
 }
 
 .cabeçalho div img {
-    height: 100px;
-    width: 100px;
+    width: 6%;
 }
 
-.bloco {
-    height: 500px;
-    position: relative;
-}
 
-.slider-alt {
-    height: 440px;
-    width: 730px;
-    top: 40px;
-    left: 100px;
-}
 
 .texto {
     right: 6%;
@@ -62,8 +55,44 @@ h5 {
     white-space: pre-line;
 }
 
-.leitor {
-    top: 10%;
-    left: -25%;
+.bloco {
     position: relative;
+    overflow: auto;
+}
+
+.imagem {
+    width: 50%;
+}
+
+.texto {
+    right: 0;
+    width: 50%;
+    position: absolute;
+    top: 10%;
+}
+.texto h2 {
+    width: auto;
+    font-size: 3vw;
+    padding: 5%;
+}
+.texto h5 {
+    width: auto;
+    font-size: 1.3vw;
+    margin: 0 7%;
+}
+
+.imagem2 {
+    width: 90%;
+    margin: 5% 0% 5% 10%;
+}
+
+.projeto-linguagem {
+    float: left;
+    width: 5%;
+    margin-top: 2.5%;
+    position: absolute;
+}
+.projeto-linguagem img {
+    width: 70%;
+    margin-bottom: 10%;
 }
