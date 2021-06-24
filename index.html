@@ -40,6 +40,8 @@
                 <img src="img/habs/gam.png" alt="" title="Jogos">
                 <img src="img/habs/mob.png" alt="" title="Mobile">
                 <img src="img/habs/web.png" alt="" title="Web">
+                <img src="img/logos/aws.png" alt="Python" title="Amazon Web Services" style="border-radius: 50%;">
+                <img src="img/logos/sql.png" alt="" title="SQL">
                 <img src="img/habs/mal.png" alt="" title="Machine Learning">
                 <img src="img/habs/mcc.png" alt="" title="Micro-controladores" style="-webkit-filter: invert(1); filter: invert(1);">
             </div>
@@ -48,7 +50,7 @@
 
 
         <!-- dungeon raiders -->
-        <div class="grey darken-2 bloco">
+        <div class="grey bloco">
             <div class="imagem">
                 <div class="projeto-linguagem">
                     <img src="img/logos/python.png" alt="Python" title="Python">
@@ -70,8 +72,148 @@
             </div>
         </div>
 
+        <!-- FCC API -->
+        <div class="grey bloco">
+            <div class="imagem">
+                <div class="projeto-linguagem" style="top: 0%;">
+                    <img src="img/logos/node.png" alt="Python" title="Node.js">
+                    <img src="img/logos/aws.png" alt="Python" title="Amazon Web Services" style="border-radius: 50%;">
+                </div>
+                
+                <!-- timestamp -->
+                <div id="timestamp" class="bloco-api">
+                    <h3>Timestamp Microservice</h3>
+                    <h5>
+                        API para converter datas em epochs e epochs em datas
+
+                    </h5>
+                    <h5 class="endpoints">
+                        End-points:
+                        GET /api/timestamp --> retorna a data atual
+                        GET /api/timestamp/{data} --> retorna a data passada convertida em epochs e utc
+
+                    </h5>
+
+                    <label for="data">GET /api/</label>
+                    <input id="data" type="text" placeholder="informa a data">
+                    <button class="btn" onclick="timestamp()">ENVIAR</button>
+                </div>
+
+                <!-- header_parser -->
+                <div id="header_parser" class="bloco-api">
+                    <h3>Request Header Parser Microservice</h3>
+                    <h5>
+                        API para o formatar o header do requerimento HTTP
+
+                    </h5>
+                    <h5 class="endpoints">
+                        End-points:
+                        GET /api/header-parser/whoami --> retorna o IP, a lingua do sistema e o software do úsuario que fez a chamada
+
+                    </h5>
+
+                    <button class="btn" onclick="window.open('https://1kdj7dtvil.execute-api.us-east-2.amazonaws.com/api/header-parser/whoami')">TESTAR</button>
+                </div>
+
+                <!-- URL Shortener -->
+                <div id="url_shortener" class="bloco-api">
+                    <h3>URL Shortener</h3>
+                    <h5>
+                        API para encurtar URLs e permitir que sejam acessadas a partir de um índice
+
+                    </h5>
+                    <h5 class="endpoints">
+                        End-points:
+                        POST /api/urlshortener/shorturl --> verifica se a url é valida e a salva no banco de dados
+                        GET /api/urlshortener/shorturl/{short} --> acessa uma url de acordo com seu índice no banco de dados
+
+                    </h5>
+
+                    <form action="https://apis-microservices-project.herokuapp.com/api/urlshortener/shorturl" method="POST" target="_blank">
+                        <label for="url">POST /api/urlshortener/shorturl</label>
+                        <input id="url" type="text" placeholder="informa uma URL">
+                        <button class="btn" type="submit">TESTAR</button>
+                    </form>
+                </div>
+
+                <!-- exercise -->
+                <div id="exercise" class="bloco-api">
+                    <h3>Exercise Tracker</h3>
+                    <h5>
+                        API para criar registros de úsuarios e associar informações de exercícios a eles
+
+                    </h5>
+                    <h5 class="endpoints">
+                        End-points:
+                        POST /api/exercise-tracker/users
+                        POST /api/exercise-tracker/users/:_id/exercises
+                        GET /api/exercise-tracker/users
+                        GET /api/exercise-tracker/users/:_id/logs
+
+                    </h5>
+
+                    <form action="https://apis-microservices-project.herokuapp.com/api/exercise-tracker/users" method="POST" target="_blank">
+                        <label for="user">POST /api/exercise-tracker/users</label>
+                        <input id="user" type="text" name="username" placeholder="username">
+                        <button class="btn" type="submit">TESTAR</button>
+                    </form>
+
+                    <form id="exercise-form" method="POST" target="_blank" style="margin-top: 5%;">
+                        <label for="uid" style="margin: 0% 20%">POST /api/exercise-tracker/users</label>
+                        <input id="uid" type="text" name=":_id"        placeholder="_id">
+                        <input id="des" type="text" name="description" placeholder="description">
+                        <input id="dur" type="text" name="duration"    placeholder="duration* (mins.)">
+                        <input id="dat" type="text" name="date"        placeholder="date (yyyy-mm-dd)">
+                        <button class="btn" type="submit" value="Submit">TESTAR</button>
+                    </form>
+                </div>
+
+                <!-- filemetadata -->
+                <div id="filemetadata" class="bloco-api">
+                    <h3>File Metadata</h3>
+                    <h5>
+                        API para os metadados de um arquivo
+
+                    </h5>
+                    <h5 class="endpoints">
+                        End-points:
+                        POST /api/filemetadata/fileanalyse --> retorna o nome, tipo e tamnho do arquivo enviado (os arquivos enviados não serão salvos)
+
+                    </h5>
+
+                    <form enctype="multipart/form-data" action="https://apis-microservices-project.herokuapp.com/api/filemetadata/fileanalyse" method="POST" target="_blank">
+                        <label for="file">POST /api/filemetadata/fileanalyse</label>
+                        <input id="file" type="file" name="upfile">
+                        <button class="btn" type="submit">TESTAR</button>
+                    </form>
+                </div>
+
+            </div>
+
+
+            <div class="texto">
+                <h2>APIs PARA DEMONSTRAÇÃO</h2>
+                <h5>
+                    APIs desenvolvidas durante os projetos Free Code Camp.
+                    Escritas em Javascript utilizando Node.js e implementadas nos serviços da AWS.
+                    * Algumas não puderam ser integradas à AWS devido a problemas técnicos e funcionais, estas estão implementadas no Heroku.
+
+                    <label>Seleciona a API</label>
+                    <select id="a" class="browser-default" onchange="change(this.value)" onloadeddata="change(this.value)">
+                        <option value="timestamp" selected>Timestamp Microservice</option>
+                        <option value="header_parser">Request Header Parser Microservice</option>
+                        <option value="url_shortener">URL Shortener Microservice</option>
+                        <option value="exercise">Exercise Tracker</option>
+                        <option value="filemetadata">File Metadata Microservice</option>
+                    </select>
+
+                    <a href="https://github.com/Loukis-13/FCC_APIs" target="_blank">CÓDIGO NO GITHUB</a>
+                </h5>
+            </div>
+        </div>
+
         <!-- leitor agil -->
-        <div class="grey darken-3 bloco">
+        <div class="grey bloco">
             <div class="imagem">
                 <div class="projeto-linguagem">
                     <img src="img/logos/python.png" alt="Python" title="Python">
@@ -94,11 +236,12 @@
         </div>
 
         <!-- nossa cantina -->
-        <div class="grey darken-2 bloco">
+        <div class="grey bloco">
             <div class="imagem">
                 <div class="projeto-linguagem">
                     <img src="img/logos/python.png" alt="Python" title="Python">
                     <img src="img/logos/javascript.png" alt="Python" title="Javascript">
+                    <img src="img/logos/mysql.png" alt="MySQL" title="MySQL">
                 </div>
             
                 <img class="imagem2" src="img/nosca/1.jpg" alt="">
@@ -116,7 +259,7 @@
         </div>
 
         <!-- gesso morro agudo -->
-        <div class="grey darken-3 bloco" style="height: auto;">
+        <div class="grey bloco" style="height: auto;">
             <div class="imagem">
                 <div class="projeto-linguagem">
                     <img src="img/logos/python.png" alt="Python" title="Python">
@@ -143,5 +286,6 @@
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>

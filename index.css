@@ -28,7 +28,7 @@ body {
 .cabeçalho h1, h2 {
     color: white;
     margin: 0%;
-    padding: 30px;
+    padding: 1.5%;
 }
 
 .cabeçalho div {
@@ -95,4 +95,42 @@ h5 {
 .projeto-linguagem img {
     width: 70%;
     margin-bottom: 10%;
+}
+
+.bloco-api {
+    margin: 10% 0% 10% 5%;
+    display: none;
+}
+
+.bloco-api h3 {
+    width: 80%;
+    font-size: 3vw;
+    margin: auto;
+}
+
+.bloco-api h5 {
+    color: white;
+    margin: auto;
+    width: auto;
+    font-size: 1.3vw;
+}
+
+.endpoints {
+    text-align: initial;
+    padding-left: 5%;
+}
+
+.bloco-api label {
+    margin: 0% 20%;
+}
+
+.bloco-api input {
+    width: 75% !important;
+    height: 5vh !important;
+    background-color: white !important;
+    margin-bottom: 0 !important;
+}
+
+.bloco-api button {
+    margin: 5% 10% 0% 10%;
 }
