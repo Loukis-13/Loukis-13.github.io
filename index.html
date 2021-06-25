@@ -15,26 +15,28 @@
 
     <body class="grey lighten-2">
         <div class="black cabeçalho">
-            <div class="nav-wrapper grey valign-wrapper" style="float: left;position: absolute;margin: 0;border-radius: 0 0 30px 0;">
-                <a href="https://github.com/Loukis-13" style="margin: 5px;" target="_blank"><img src="img/media/git.png" alt="" style="height: 60px;width: 60px;"></a>
-                <a href="https://www.linkedin.com/in/jose-nivaldo-da-silva-hypolito/" style="margin: 5px;" target="_blank"><img style="border-radius: 10%;height: 60px;width: 60px;" src="img/media/linkedin.png" alt=""></a>
-                <a href="https://replit.com/repls" style="margin: 5px;" target="_blank"><img src="img/media/replit.png" alt="" style="height: 60px;width: 60px;"></a>
+            <div class="nav-wrapper grey valign-wrapper media" style="float: left;position: absolute;margin: 0;border-radius: 0 0 30px 0;">
+                <a href="https://github.com/Loukis-13" style="margin: 5px;" target="_blank"><img src="img/media/git.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/jose-nivaldo-da-silva-hypolito/" style="margin: 5px;" target="_blank"><img src="img/media/linkedin.png" style="border-radius: 10%;" alt=""></a>
+                <a href="https://replit.com/repls" style="margin: 5px;" target="_blank"><img src="img/media/replit.png" alt=""></a>
+                <a href="https://web.digitalinnovation.one/users/ze_zinho-2010?tab=achievements" style="margin: 5px;" target="_blank"><img src="img/media/dio.png" alt="" style="background-color: transparent;"></a>
+                <a href="https://www.freecodecamp.org/loukis" style="margin: 5px;" target="_blank"><img src="img/media/fcc.png" alt=""></a>
             </div>
 
             <div class="nav-wrapper valign-wrapper" style="float: right;margin: 0;">
-                <a href="https://www.codewars.com/users/Loukis" style="margin: 5px;" target="_blank"><img src="https://www.codewars.com/users/Loukis/badges/large" alt="" style="width: 100%;height: 100%;border-radius: 0;background-color: transparent;padding-right: 15px;"></a>
+                <a id="cw" href="https://www.codewars.com/users/Loukis" style="margin: 5px;" target="_blank"><img src="https://www.codewars.com/users/Loukis/badges/large" alt=""></a>
             </div>
 
-            <h1 style="padding-top: 100px; font-size: 4vw;">JOSÉ NIVALDO DA SILVA HYPÓLITO</h1>
+            <h1 style="padding-top: 120px; font-size: 4vw;">JOSÉ NIVALDO DA SILVA HYPÓLITO</h1>
             <h2 style="font-size: 3vw;">DESENVOLVEDOR</h2>
-            <div>
+            <div class="icons">
                 <h2 style="font-size: 3vw;">LINGUAGENS: </h2>
                 <img src="img/logos/python.png" alt="Python" title="Python">
                 <img src="img/logos/javascript.png" alt="Javascript" title="Javascript">
                 <img src="img/logos/java.png" alt="Java" title="Java">
                 <img src="img/logos/C++.png" alt="C++" title="C++">
             </div>
-            <div>
+            <div class="icons">
                 <h2 style="font-size: 3vw;">HABILIDADES: </h2>
                 <img src="img/habs/sis.png" alt="" title="Sistemas">
                 <img src="img/habs/gam.png" alt="" title="Jogos">
@@ -94,7 +96,7 @@
 
                     </h5>
 
-                    <label for="data">GET /api/</label>
+                    <label for="data">GET /api/timestamp/{data}</label>
                     <input id="data" type="text" placeholder="informa a data">
                     <button class="btn" onclick="timestamp()">ENVIAR</button>
                 </div>
@@ -208,6 +210,35 @@
                     </select>
 
                     <a href="https://github.com/Loukis-13/FCC_APIs" target="_blank">CÓDIGO NO GITHUB</a>
+                </h5>
+            </div>
+        </div>
+
+        <!-- FCC Análise de dados -->
+        <div class="grey bloco">
+            <div class="imagem">
+                <div class="projeto-linguagem">
+                    <img src="img/logos/python.png" alt="Python" title="Python">
+                </div>
+
+                <img class="imagem2" src="img/an_dados/graficos.jpeg" alt="">
+            </div>
+            <div class="texto">
+                <h2>DEMONSTAÇÕES DE ANÁLISES DE DADOS</h2>
+                <h5>
+                    Algoritimos de análise, manipulação, criação e transformação de dados, feitos em Python usando as bibliotecas Numpy, Pandas, Matplotlib e Seaborn
+
+                    <div class="dados">
+                        <select id="b" class="browser-default">
+                            <option value="mvs" selected>Mean Variance Standard-deviation Calculator</option>
+                            <option value="medical_data">Medical Data Visualizer</option>
+                            <option value="demographic">Demographic Data Analyzer</option>
+                            <option value="page_view">Page View Time Series Visualizer</option>
+                            <option value="sea_level">Sea Level Predictor</option>
+                        </select>
+                        <button class="btn" onclick="open_dados()">ABRIR</button>
+                    </div>
+                    <a href="https://github.com/Loukis-13/FCC_analise_de_dados" target="_blank">CÓDIGO NO GITHUB</a>
                 </h5>
             </div>
         </div>
