@@ -1,152 +1,16 @@
 body {
     text-align: center;
     font-family: 'KoHo', sans-serif;
-    overflow-x: hidden; 
-    width: 100%;
 }
 
-.media img{
-    height: 60px;
-    width: 60px;
-    background-color: white;
-    border-radius: 100%;
+h5 {white-space: pre-line;}
+code {white-space: pre-line;}
+
+.m-1 {margin: 1% !important;}
+
+@media only screen and (max-width: 600px) {
+    h1 {font-size: 10vw;}
+    h2 {font-size: 9vw;}
 }
 
-#cw {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-    background-color: transparent;
-    padding-right: 15px;
-}
-
-#nav-mobile{
-    height: 60px;
-}
-
-.cabeçalho {
-    height: auto;
-    overflow: auto;
-    overflow-x: hidden;
-}
-
-.cabeçalho * {
-    margin: 10px;
-}
-
-.cabeçalho h1, h2 {
-    color: white;
-    margin: 0%;
-    padding: 1.5%;
-}
-
-.cabeçalho div {
-    display: flex;
-    align-items: center;
-    justify-content: center
-}
-
-.icons img {
-    width: 6%;
-}
-
-
-
-h5 {
-    overflow: hidden;
-    width: 800px;
-    white-space: pre-line;
-}
-
-.bloco {
-    position: relative;
-    overflow: auto;
-}
-
-.imagem {
-    width: 50%;
-}
-
-.texto {
-    right: 0;
-    width: 50%;
-    position: absolute;
-    top: 10%;
-}
-.texto h2 {
-    width: auto;
-    font-size: 3vw;
-    padding: 5%;
-    padding-top: 3%;
-}
-.texto h5 {
-    width: auto;
-    font-size: 1.3vw;
-    margin: 0 7%;
-}
-
-.imagem2 {
-    width: 90%;
-    margin: 5% 0% 5% 10%;
-}
-
-.projeto-linguagem {
-    float: left;
-    width: 5%;
-    margin-top: 2.5%;
-    position: absolute;
-}
-.projeto-linguagem img {
-    width: 70%;
-    margin-bottom: 10%;
-}
-
-.bloco-api {
-    margin: 10% 0% 10% 5%;
-    display: none;
-}
-
-.bloco-api h3 {
-    width: 80%;
-    font-size: 3vw;
-    margin: auto;
-}
-
-.bloco-api h5 {
-    color: white;
-    margin: auto;
-    width: auto;
-    font-size: 1.3vw;
-}
-
-.endpoints {
-    text-align: initial;
-    padding-left: 5%;
-}
-
-.bloco-api label {
-    margin: 0% 20%;
-}
-
-.bloco-api input {
-    width: 75% !important;
-    height: 5vh !important;
-    background-color: white !important;
-    margin-bottom: 0 !important;
-}
-
-.bloco-api button {
-    margin: 5% 10% 0% 10%;
-}
-
-.dados {
-    display: flex;
-}
-
-.dados select {
-    width: 80%;
-}
-
-.dados button {
-    margin: auto;
-}
+/* .modal { width: 1300px !important ; height: 740px !important ; max-height: 100%; overflow: visible} */

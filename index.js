@@ -1,9 +1,3 @@
-let cor = 1
-for (let i of document.getElementsByClassName("bloco")) {
-    if (cor) {i.classList.add("darken-2"); cor=0;}
-    else {i.classList.add("darken-3"); cor=1;}
-}
-
 function change(v) {
     let apis = ["timestamp", "header_parser", "url_shortener", "exercise", "filemetadata"];
     apis.forEach( (x)=>document.getElementById(x).style.display="none" );
@@ -22,7 +16,7 @@ function timestamp() {
 
 const exerciseForm = document.getElementById("exercise-form"); 
 exerciseForm.addEventListener("submit", () => { 
-    const userId = document.getElementById("uid").value;
+    const userId = document.getElementById("userId").value;
     exerciseForm.action = `https://apis-microservices-project.herokuapp.com/api/exercise-tracker/users/${userId}/exercises`; 
     exerciseForm.submit(); 
 }); 
@@ -34,6 +28,7 @@ url_dados = {
     'page_view': 'https://colab.research.google.com/drive/11qkOfJlo-8JKne7wPtd39xVINqLYS-vJ?usp=sharing',
     'sea_level': 'https://colab.research.google.com/drive/17_eYVYndSfQ5lVeltbytLF2NbBtMluyM?usp=sharing'
 }
+
 function open_dados() {
-    window.open(url_dados[document.getElementById("b").value])
+    window.open(url_dados[document.getElementById("opcaoAnaliseDeDados").value])
 }

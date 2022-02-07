@@ -3,8 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Loukis</title>
-        <link rel="shortcut icon" href="img/media/git.png" />
-        <link rel="shortcut icon" href="img/media/git.png">
+        <link rel="shortcut icon" href="img/redes-sociais/git.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="index.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,308 +13,318 @@
     </head>
 
     <body class="grey lighten-2">
-        <div class="black cabeçalho">
-            <div class="nav-wrapper grey valign-wrapper media" style="float: left;position: absolute;margin: 0;border-radius: 0 0 30px 0;">
-                <a href="https://github.com/Loukis-13" style="margin: 5px;" target="_blank"><img src="img/media/git.png" alt=""></a>
-                <a href="https://www.linkedin.com/in/jose-nivaldo-da-silva-hypolito/" style="margin: 5px;" target="_blank"><img src="img/media/linkedin.png" style="border-radius: 10%;" alt=""></a>
-                <a href="https://replit.com/repls" style="margin: 5px;" target="_blank"><img src="img/media/replit.png" alt=""></a>
-                <a href="https://web.digitalinnovation.one/users/ze_zinho-2010?tab=achievements" style="margin: 5px;" target="_blank"><img src="img/media/dio.png" alt="" style="background-color: transparent;"></a>
-                <a href="https://www.freecodecamp.org/loukis" style="margin: 5px;" target="_blank"><img src="img/media/fcc.png" alt=""></a>
-            </div>
-
-            <div class="nav-wrapper valign-wrapper" style="float: right;margin: 0;">
-                <a id="cw" href="https://www.codewars.com/users/Loukis" style="margin: 5px;" target="_blank"><img src="https://www.codewars.com/users/Loukis/badges/large" alt=""></a>
-            </div>
-
-            <h1 style="padding-top: 120px; font-size: 4vw;">JOSÉ NIVALDO DA SILVA HYPÓLITO</h1>
-            <h2 style="font-size: 3vw;">DESENVOLVEDOR</h2>
-            <div class="icons">
-                <h2 style="font-size: 3vw;">LINGUAGENS: </h2>
-                <img src="img/logos/python.png" alt="Python" title="Python">
-                <img src="img/logos/javascript.png" alt="Javascript" title="Javascript">
-                <img src="img/logos/java.png" alt="Java" title="Java">
-                <img src="img/logos/C++.png" alt="C++" title="C++">
-            </div>
-            <div class="icons">
-                <h2 style="font-size: 3vw;">HABILIDADES: </h2>
-                <img src="img/habs/sis.png" alt="" title="Sistemas">
-                <img src="img/habs/gam.png" alt="" title="Jogos">
-                <img src="img/habs/mob.png" alt="" title="Mobile">
-                <img src="img/habs/web.png" alt="" title="Web">
-                <img src="img/logos/aws.png" alt="Python" title="Amazon Web Services" style="border-radius: 50%;">
-                <img src="img/logos/sql.png" alt="" title="SQL">
-                <img src="img/habs/mal.png" alt="" title="Machine Learning">
-                <img src="img/habs/mcc.png" alt="" title="Micro-controladores" style="-webkit-filter: invert(1); filter: invert(1);">
-            </div>
-        </div>
-
-
-
-        <!-- dungeon raiders -->
-        <div class="grey bloco">
-            <div class="imagem">
-                <div class="projeto-linguagem">
-                    <img src="img/logos/python.png" alt="Python" title="Python">
-                </div>
-
-                <img class="imagem2" src="img/dungeon/tela1.png" alt="">
-            </div>
-            <div class="texto">
-                <h2>DUNGEON RAIDERS</h2>
-                <h5>
-                    Jogo digital criado com base no jogo de cartas <a href="https://www.ludopedia.com.br/jogo/dungeon-raiders" target="_blank">Dungeon Raiders</a>.
-                    Feito utilizando Kivy para Python.
-                    Versão para um jogador terminada, versão para dois jogadores em desenvolvimento.
-
-                    Links para download: <a href="https://mega.nz/file/rvZRwC7Y#DMSt5Tujcne5PIMwUl2ji5ier2PSZ1LV4E8EAaoQ_-Y" target="_blank">ANDROID</a>
-
-                    <a href="https://github.com/Loukis-13/Dungeon-Raiders" target="_blank">CÓDIGO NO GITHUB</a>
-                </h5>
-            </div>
-        </div>
-
-        <!-- FCC API -->
-        <div class="grey bloco">
-            <div class="imagem">
-                <div class="projeto-linguagem" style="top: 0%;">
-                    <img src="img/logos/node.png" alt="Python" title="Node.js">
-                    <img src="img/logos/aws.png" alt="Python" title="Amazon Web Services" style="border-radius: 50%;">
-                </div>
-                
-                <!-- timestamp -->
-                <div id="timestamp" class="bloco-api">
-                    <h3>Timestamp Microservice</h3>
-                    <h5>
-                        API para converter datas em epochs e epochs em datas
-
-                    </h5>
-                    <h5 class="endpoints">
-                        End-points:
-                        GET /api/timestamp --> retorna a data atual
-                        GET /api/timestamp/{data} --> retorna a data passada convertida em epochs e utc
-
-                    </h5>
-
-                    <label for="data">GET /api/timestamp/{data}</label>
-                    <input id="data" type="text" placeholder="informa a data">
-                    <button class="btn" onclick="timestamp()">ENVIAR</button>
-                </div>
-
-                <!-- header_parser -->
-                <div id="header_parser" class="bloco-api">
-                    <h3>Request Header Parser Microservice</h3>
-                    <h5>
-                        API para o formatar o header do requerimento HTTP
-
-                    </h5>
-                    <h5 class="endpoints">
-                        End-points:
-                        GET /api/header-parser/whoami --> retorna o IP, a lingua do sistema e o software do úsuario que fez a chamada
-
-                    </h5>
-
-                    <button class="btn" onclick="window.open('https://1kdj7dtvil.execute-api.us-east-2.amazonaws.com/api/header-parser/whoami')">TESTAR</button>
-                </div>
-
-                <!-- URL Shortener -->
-                <div id="url_shortener" class="bloco-api">
-                    <h3>URL Shortener</h3>
-                    <h5>
-                        API para encurtar URLs e permitir que sejam acessadas a partir de um índice
-
-                    </h5>
-                    <h5 class="endpoints">
-                        End-points:
-                        POST /api/urlshortener/shorturl --> verifica se a url é valida e a salva no banco de dados
-                        GET /api/urlshortener/shorturl/{short} --> acessa uma url de acordo com seu índice no banco de dados
-
-                    </h5>
-
-                    <form action="https://apis-microservices-project.herokuapp.com/api/urlshortener/shorturl" method="POST" target="_blank">
-                        <label for="url">POST /api/urlshortener/shorturl</label>
-                        <input id="url" type="text" placeholder="informa uma URL">
-                        <button class="btn" type="submit">TESTAR</button>
-                    </form>
-                </div>
-
-                <!-- exercise -->
-                <div id="exercise" class="bloco-api">
-                    <h3>Exercise Tracker</h3>
-                    <h5>
-                        API para criar registros de úsuarios e associar informações de exercícios a eles
-
-                    </h5>
-                    <h5 class="endpoints">
-                        End-points:
-                        POST /api/exercise-tracker/users
-                        POST /api/exercise-tracker/users/:_id/exercises
-                        GET /api/exercise-tracker/users
-                        GET /api/exercise-tracker/users/:_id/logs
-
-                    </h5>
-
-                    <form action="https://apis-microservices-project.herokuapp.com/api/exercise-tracker/users" method="POST" target="_blank">
-                        <label for="user">POST /api/exercise-tracker/users</label>
-                        <input id="user" type="text" name="username" placeholder="username">
-                        <button class="btn" type="submit">TESTAR</button>
-                    </form>
-
-                    <form id="exercise-form" method="POST" target="_blank" style="margin-top: 5%;">
-                        <label for="uid" style="margin: 0% 20%">POST /api/exercise-tracker/users</label>
-                        <input id="uid" type="text" name=":_id"        placeholder="_id">
-                        <input id="des" type="text" name="description" placeholder="description">
-                        <input id="dur" type="text" name="duration"    placeholder="duration* (mins.)">
-                        <input id="dat" type="text" name="date"        placeholder="date (yyyy-mm-dd)">
-                        <button class="btn" type="submit" value="Submit">TESTAR</button>
-                    </form>
-                </div>
-
-                <!-- filemetadata -->
-                <div id="filemetadata" class="bloco-api">
-                    <h3>File Metadata</h3>
-                    <h5>
-                        API para os metadados de um arquivo
-
-                    </h5>
-                    <h5 class="endpoints">
-                        End-points:
-                        POST /api/filemetadata/fileanalyse --> retorna o nome, tipo e tamnho do arquivo enviado (os arquivos enviados não serão salvos)
-
-                    </h5>
-
-                    <form enctype="multipart/form-data" action="https://apis-microservices-project.herokuapp.com/api/filemetadata/fileanalyse" method="POST" target="_blank">
-                        <label for="file">POST /api/filemetadata/fileanalyse</label>
-                        <input id="file" type="file" name="upfile">
-                        <button class="btn" type="submit">TESTAR</button>
-                    </form>
-                </div>
-
-            </div>
-
-
-            <div class="texto">
-                <h2>APIs PARA DEMONSTRAÇÃO</h2>
-                <h5>
-                    APIs desenvolvidas durante os projetos Free Code Camp.
-                    Escritas em Javascript utilizando Node.js e implementadas nos serviços da AWS.
-                    * Algumas não puderam ser integradas à AWS devido a problemas técnicos e funcionais, estas estão implementadas no Heroku.
-
-                    <label>Seleciona a API</label>
-                    <select id="a" class="browser-default" onchange="change(this.value)" onloadeddata="change(this.value)">
-                        <option value="timestamp" selected>Timestamp Microservice</option>
-                        <option value="header_parser">Request Header Parser Microservice</option>
-                        <option value="url_shortener">URL Shortener Microservice</option>
-                        <option value="exercise">Exercise Tracker</option>
-                        <option value="filemetadata">File Metadata Microservice</option>
-                    </select>
-
-                    <a href="https://github.com/Loukis-13/FCC_APIs" target="_blank">CÓDIGO NO GITHUB</a>
-                </h5>
-            </div>
-        </div>
-
-        <!-- FCC Análise de dados -->
-        <div class="grey bloco">
-            <div class="imagem">
-                <div class="projeto-linguagem">
-                    <img src="img/logos/python.png" alt="Python" title="Python">
-                </div>
-
-                <img class="imagem2" src="img/an_dados/graficos.jpeg" alt="">
-            </div>
-            <div class="texto">
-                <h2>DEMONSTAÇÕES DE ANÁLISES DE DADOS</h2>
-                <h5>
-                    Algoritimos de análise, manipulação, criação e transformação de dados, feitos em Python usando as bibliotecas Numpy, Pandas, Matplotlib e Seaborn
-
-                    <div class="dados">
-                        <select id="b" class="browser-default">
-                            <option value="mvs" selected>Mean Variance Standard-deviation Calculator</option>
-                            <option value="medical_data">Medical Data Visualizer</option>
-                            <option value="demographic">Demographic Data Analyzer</option>
-                            <option value="page_view">Page View Time Series Visualizer</option>
-                            <option value="sea_level">Sea Level Predictor</option>
-                        </select>
-                        <button class="btn" onclick="open_dados()">ABRIR</button>
+        <div class="black pb-1">
+            <div class="row valign-wrapper">
+                <div class="col l4 m8">
+                    <div class="row grey" style="border-bottom-right-radius: 3vw;">
+                        <a class="col s2 m-1" href="https://github.com/Loukis-13" target="_blank"><img class="responsive-img" src="img/redes-sociais/git.png"></a>
+                        <a class="col s2 m-1" href="https://www.linkedin.com/in/jose-nivaldo-da-silva-hypolito/" target="_blank"><img class="responsive-img" src="img/redes-sociais/linkedin.png" style="border-radius: 10%;"></a>
+                        <a class="col s2 m-1" href="https://replit.com/repls" target="_blank"><img class="responsive-img" src="img/redes-sociais/replit.png"></a>
+                        <a class="col s2 m-1" href="https://web.digitalinnovation.one/users/ze_zinho-2010?tab=achievements" target="_blank"><img class="responsive-img" src="img/redes-sociais/dio.png" style="background-color: transparent;"></a>
+                        <a class="col s2 m-1" href="https://www.freecodecamp.org/loukis" target="_blank"><img class="responsive-img" src="img/redes-sociais/fcc.png"></a>
                     </div>
-                    <a href="https://github.com/Loukis-13/FCC_analise_de_dados" target="_blank">CÓDIGO NO GITHUB</a>
-                </h5>
+                </div>
+                <a class="col l8 m4 hide-on-med-and-down" href="https://www.codewars.com/users/Loukis" target="_blank"><img class="right" src="https://www.codewars.com/users/Loukis/badges/large"></a>
+                <a class="col l8 m4 hide-on-large-only" href="https://www.codewars.com/users/Loukis" target="_blank"><img class="right" src="https://www.codewars.com/users/Loukis/badges/micro"></a>
+            </div>
+
+            <h1 class="white-text">JOSÉ NIVALDO DA SILVA HYPÓLITO</h1>
+            <h2 class="white-text">DESENVOLVEDOR</h2>
+            <div class="row">
+                <h2 class="col offset-s2 white-text">LINGUAGENS: </h2>
+                <img class="col s1" src="img/logos/Python.png" alt="Python" title="Python">
+                <img class="col s1" src="img/logos/Javascript.png" alt="Javascript" title="Javascript">
+                <img class="col s1" src="img/logos/GO.png" alt="GO" title="GO">
+                <img class="col s1" src="img/logos/C++.png" alt="C++" title="C++">
+                <img class="col s1" src="img/logos/Java.png" alt="Java" title="Java">
+                <img class="col s1" src="img/logos/CS.png" alt="C#" title="C#">
+            </div>
+            <div class="row">
+                <h2 class="col offset-s1 white-text">HABILIDADES: </h2>
+                <img class="col s1" src="img/habilidades/sis.png" title="Sistemas">
+                <img class="col s1" src="img/habilidades/gam.png" title="Jogos">
+                <img class="col s1" src="img/habilidades/mob.png" title="Mobile">
+                <img class="col s1" src="img/habilidades/web.png" title="Web">
+                <img class="col s1" src="img/logos/AWS.png" alt="Python" title="Amazon Web Services" style="border-radius: 50%;">
+                <img class="col s1" src="img/logos/SQL.png" title="SQL">
+                <img class="col s1" src="img/habilidades/mal.png" title="Machine Learning">
+                <img class="col s1" src="img/habilidades/mcc.png" title="Micro-controladores" style="-webkit-filter: invert(1); filter: invert(1);">
             </div>
         </div>
 
-        <!-- leitor agil -->
-        <div class="grey bloco">
-            <div class="imagem">
-                <div class="projeto-linguagem">
-                    <img src="img/logos/python.png" alt="Python" title="Python">
-                </div>
 
-                <img class="imagem2" src="img/leitor/leitor.png" alt="" style="width: 45%;">
+        <div class="row" style="margin-bottom: 0;">
+            <!-- dungeon raiders -->
+            <div class="col pt-1 grey darken-2">
+                <div class="col l6 m12">
+                    <div class="row">
+                        <div class="col l1 m12 s12">
+                            <div class="row">
+                                <img class="responsive-img col l12 s2" src="img/logos/Python.png" alt="Python" title="Python">
+                            </div>
+                        </div>
+                        <img class="col l11 m12 s12" src="img/dungeon/tela1.png">
+                    </div>
+                </div>
+                <div class="col l6 m12 s12">
+                    <h2>DUNGEON RAIDERS</h2>
+                    <h5>
+                        Jogo digital criado com base no jogo de cartas <a href="https://www.ludopedia.com.br/jogo/dungeon-raiders" target="_blank">Dungeon Raiders</a>.
+                        Feito utilizando Kivy para Python.
+                        Versão para um jogador terminada, versão para dois jogadores em desenvolvimento.
+
+                        Links para download: <a href="https://mega.nz/file/rvZRwC7Y#DMSt5Tujcne5PIMwUl2ji5ier2PSZ1LV4E8EAaoQ_-Y" target="_blank">ANDROID</a>
+
+                        <a href="https://github.com/Loukis-13/Dungeon-Raiders" target="_blank">CÓDIGO NO GITHUB</a>
+                    </h5>
+                </div>
             </div>
 
-            <div class="texto">
-                <h2>LEITOR ÁGIL</h2>
-                <h5>
-                    Aplicativo para mobiles para ajudar a ler arquivos e documentos rápidamente.
-                    Feito utilizando Kivy para Python.
+            <!-- FCC API -->
+            <div class="col pt-1 grey darken-3">
+                <div class="col l6 m12 pe-1">
+                    <div class="row">
+                        <div class="col s1">
+                            <img class="responsive-img" src="img/logos/Node.png" alt="Python" title="Node.js">
+                            <img class="responsive-img" src="img/logos/AWS.png" alt="Python" title="Amazon Web Services" style="border-radius: 50%;">
+                        </div>
+                    
+                    
+                        <!-- timestamp -->
+                        <div id="timestamp" class="col s11">
+                            <h3>Timestamp Microservice</h3>
+                            <br>
+                            <h5>API para converter datas em epochs e epochs em datas</h5>
+                            <br>
+                            <div class="grey lighten-1" style="text-align: left;padding: 1%;">
+                                <code>End-points:
+                                    GET /api/timestamp --> retorna a data atual
+                                    GET /api/timestamp/{data} --> retorna a data passada convertida em epochs e utc
+                                </code>
+                            </div>
+                            <br>
+                            <label for="data">GET /api/timestamp/{data}</label>
+                            <input id="data" type="text" placeholder="informa a data">
+                            <button class="btn" onclick="timestamp()">ENVIAR</button>
+                        </div>
 
-                    <a href="https://mega.nz/file/TzpCmAjD#LFH9cb6-01HEWKOTLQWG39lfwAG61NdIpOUMEsWETmc" target="_blank">ANDROID</a>
+                        <!-- header_parser -->
+                        <div id="header_parser" class="col s11">
+                            <h3>Request Header Parser Microservice</h3>
+                            <br>
+                            <h5>API para o formatar o header do requerimento HTTP</h5>
+                            <br>
+                            <div class="grey lighten-1" style="text-align: left;padding: 1%;">
+                                <code>End-points:
+                                    GET /api/header-parser/whoami --> retorna o IP, a lingua do sistema e o software do úsuario que fez a chamada
+                                </code>
+                            </div>
+                            <br>
+                            <button class="btn" onclick="window.open('https://1kdj7dtvil.execute-api.us-east-2.amazonAWS.com/api/header-parser/whoami')">TESTAR</button>
+                        </div>
 
-                    <a href="https://github.com/Loukis-13/Leitor-agil" target="_blank">CÓDIGO NO GITHUB</a>
-                </h5>
-            </div>
-        </div>
+                        <!-- URL Shortener -->
+                        <div id="url_shortener" class="col s11">
+                            <h3>URL Shortener</h3>
+                            <br>
+                            <h5>API para encurtar URLs e permitir que sejam acessadas a partir de um índice</h5>
+                            <br>
+                            <div class="grey lighten-1" style="text-align: left;padding: 1%;">
+                                <code>End-points:
+                                    POST /api/urlshortener/shorturl --> verifica se a url é valida e a salva no banco de dados
+                                    GET /api/urlshortener/shorturl/{short} --> acessa uma url de acordo com seu índice no banco de dados
+                                </code>
+                            </div>
+                            <br>
+                            <form action="https://apis-microservices-project.herokuapp.com/api/urlshortener/shorturl" method="POST" target="_blank">
+                                <label for="url">POST /api/urlshortener/shorturl</label>
+                                <input id="url" type="text" placeholder="informa uma URL">
+                                <button class="btn" type="submit">TESTAR</button>
+                            </form>
+                        </div>
 
-        <!-- nossa cantina -->
-        <div class="grey bloco">
-            <div class="imagem">
-                <div class="projeto-linguagem">
-                    <img src="img/logos/python.png" alt="Python" title="Python">
-                    <img src="img/logos/javascript.png" alt="Python" title="Javascript">
-                    <img src="img/logos/mysql.png" alt="MySQL" title="MySQL">
+                        <!-- exercise -->
+                        <div id="exercise" class="col s11">
+                            <h3>Exercise Tracker</h3>
+                            <br>
+                            <h5>API para criar registros de úsuarios e associar informações de exercícios a eles</h5>
+                            <br>
+                            <div class="grey lighten-1" style="text-align: left;padding: 1%;">
+                                <code>End-points:
+                                    POST /api/exercise-tracker/users
+                                    POST /api/exercise-tracker/users/:_id/exercises
+                                    GET /api/exercise-tracker/users
+                                    GET /api/exercise-tracker/users/:_id/logs
+                                </code>
+                            </div>
+                            <br>
+                            <form action="https://apis-microservices-project.herokuapp.com/api/exercise-tracker/users" method="POST" target="_blank">
+                                <label for="user">POST /api/exercise-tracker/users</label>
+                                <input id="user" type="text" name="username" placeholder="username">
+                                <button class="btn" type="submit">TESTAR</button>
+                            </form>
+
+                            <form id="exercise-form" method="POST" target="_blank" style="margin-top: 5%;">
+                                <label for="userId" style="margin: 0% 20%">POST /api/exercise-tracker/users</label>
+                                <input id="userId" type="text" name=":_id"        placeholder="_id">
+                                <input id="des" type="text" name="description" placeholder="description">
+                                <input id="dur" type="text" name="duration"    placeholder="duration* (mins.)">
+                                <input id="dat" type="text" name="date"        placeholder="date (yyyy-mm-dd)">
+                                <button class="btn" type="submit" value="Submit">TESTAR</button>
+                            </form>
+                        </div>
+
+                        <!-- filemetadata -->
+                        <div id="filemetadata" class="col s11">
+                            <h3>File Metadata</h3>
+                            <br>
+                            <h5>API para os metadados de um arquivo</h5>
+                            <br>
+                            <div class="grey lighten-1" style="text-align: left;padding: 1%;">
+                                <code>End-points:
+                                    POST /api/filemetadata/fileanalyse --> retorna o nome, tipo e tamnho do arquivo enviado (os arquivos enviados não serão salvos)
+                                </code>
+                            </div>
+                            <br>
+                            <form enctype="multipart/form-data" action="https://apis-microservices-project.herokuapp.com/api/filemetadata/fileanalyse" method="POST" target="_blank">
+                                <label for="file">POST /api/filemetadata/fileanalyse</label>
+                                <input id="file" type="file" name="upfile" style="background-color: white;">
+                                <button class="btn" type="submit">TESTAR</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="col s6 ps-1">
+                    <h2>APIs PARA DEMONSTRAÇÃO</h2>
+                    <h5>
+                        APIs desenvolvidas durante os projetos Free Code Camp.
+                        Escritas em Javascript utilizando Node.js e implementadas nos serviços da AWS.
+                        * Algumas não puderam ser integradas à AWS devido a problemas técnicos e funcionais, estas estão implementadas no Heroku.
+
+                        <label>Seleciona a API</label>
+                        <select id="a" class="browser-default" onchange="change(this.value)" onloadeddata="change(this.value)">
+                            <option value="timestamp" selected>Timestamp Microservice</option>
+                            <option value="header_parser">Request Header Parser Microservice</option>
+                            <option value="url_shortener">URL Shortener Microservice</option>
+                            <option value="exercise">Exercise Tracker</option>
+                            <option value="filemetadata">File Metadata Microservice</option>
+                        </select>
+
+                        <a href="https://github.com/Loukis-13/FCC_APIs" target="_blank">CÓDIGO NO GITHUB</a>
+                    </h5>
+                </div>
+            </div>
+
+            <!-- FCC Análise de dados -->
+            <div class="col pt-1 grey darken-2">
+                <div class="col l6 m12">
+                    <div class="row">
+                        <div class="col s1">
+                            <img class="responsive-img" src="img/logos/Python.png" alt="Python" title="Python">
+                        </div>
+                        <img class="col s11" src="img/analise-de-dados/graficos.jpeg">
+                    </div>
+                </div>
+
+                <div class="col l6 m12">
+                    <h2>DEMONSTAÇÕES DE ANÁLISES DE DADOS</h2>
+                    <h5>
+                        Algoritimos de análise, manipulação, criação e transformação de dados, feitos em Python usando as bibliotecas Numpy, Pandas, Matplotlib e Seaborn
+
+                        <div class="dados">
+                            <select id="opcaoAnaliseDeDados" class="browser-default">
+                                <option value="mvs" selected>Mean Variance Standard-deviation Calculator</option>
+                                <option value="medical_data">Medical Data Visualizer</option>
+                                <option value="demographic">Demographic Data Analyzer</option>
+                                <option value="page_view">Page View Time Series Visualizer</option>
+                                <option value="sea_level">Sea Level Predictor</option>
+                            </select>
+                            <button class="btn" onclick="open_dados()">ABRIR</button>
+                        </div>
+                        <a href="https://github.com/Loukis-13/FCC_analise_de_dados" target="_blank">CÓDIGO NO GITHUB</a>
+                    </h5>
+                </div>
+            </div>
+
+            <!-- leitor agil -->
+            <div class="col pt-1 grey darken-3">
+                <div class="col l6 m12">
+                    <div class="row">
+                        <div class="col s1">
+                            <img class="responsive-img" src="img/logos/Python.png" alt="Python" title="Python">
+                        </div>
+                        <img class="col s6 offset-s3" src="img/leitor/leitor.png">
+                    </div>
+                </div>
+
+                <div class="col l6 m12">
+                    <h2>LEITOR ÁGIL</h2>
+                    <h5>
+                        Aplicativo para mobiles para ajudar a ler arquivos e documentos rápidamente.
+                        Feito utilizando Kivy para Python.
+
+                        <a href="https://mega.nz/file/TzpCmAjD#LFH9cb6-01HEWKOTLQWG39lfwAG61NdIpOUMEsWETmc" target="_blank">ANDROID</a>
+
+                        <a href="https://github.com/Loukis-13/Leitor-agil" target="_blank">CÓDIGO NO GITHUB</a>
+                    </h5>
+                </div>
+            </div>
             
-                <img class="imagem2" src="img/nosca/1.jpg" alt="">
-            </div>
-
-            <div class="texto">
-                <h2>NOSSA CANTINA</h2>
-                <h5>
-                    O objetivo deste projeto é facilitar e agilizar a compra de produtos nas cantinas escolares para diminuir o tempo gasto em filas.
-                    Feito utilizando Django para o Back-end, Materialize css para o Front-end e mySQL para o banco de dados.
-
-                    <a href="https://github.com/Loukis-13/nossa-cantina" target="_blank">CÓDIGO NO GITHUB</a>
-                </h5>
-            </div>
-        </div>
-
-        <!-- gesso morro agudo -->
-        <div class="grey bloco" style="height: auto;">
-            <div class="imagem">
-                <div class="projeto-linguagem">
-                    <img src="img/logos/python.png" alt="Python" title="Python">
-                    <img src="img/logos/javascript.png" alt="Python" title="Javascript">
+            <!-- nossa cantina -->
+            <div class="col pt-1 grey darken-2">
+                <div class="col l6 m12">
+                    <div class="row">
+                        <div class="col s1">
+                            <img class="responsive-img" src="img/logos/Python.png" alt="Python" title="Python">
+                            <img class="responsive-img" src="img/logos/Javascript.png" alt="Javascript" title="Javascript">
+                            <img class="responsive-img" src="img/logos/MySQL.png" alt="MySQL" title="MySQL">
+                        </div>
+                        <img class="col s11" src="img/nossa-cantina/1.jpg">
+                    </div>
                 </div>
 
-                <img class="imagem2" src="img/gesso/gesso.png" alt="">
-            </div>
-            <div class="texto">
-                <h2>GESSO MORRO AGUDO</h2>
-                <h5>
-                    Catálogo simples que extrai os dados de um csv
+                <div class="col l6 m12">
+                    <h2>NOSSA CANTINA</h2>
+                    <h5>
+                        O objetivo deste projeto é facilitar e agilizar a compra de produtos nas cantinas escolares para diminuir o tempo gasto em filas.
+                        Feito utilizando Django para o Back-end, Materialize css para o Front-end e mySQL para o banco de dados.
 
-                    <a href="https://github.com/Loukis-13/gesso-morro-agudo" target="_blank">CÓDIGO NO GITHUB</a>
-                    <a href="https://loukis-13.github.io/gesso-morro-agudo/" target="_blank">GIT PAGE</a>
-                </h5>
+                        <a href="https://github.com/Loukis-13/nossa-cantina" target="_blank">CÓDIGO NO GITHUB</a>
+                    </h5>
+                </div>
+            </div>
+
+            <!-- gesso morro agudo -->
+            <div class="col pt-1 grey darken-3">
+                <div class="col l6 m12">
+                    <div class="row">
+                        <div class="col s1">
+                            <img class="responsive-img" src="img/logos/Python.png" alt="Python" title="Python">
+                            <img class="responsive-img" src="img/logos/Javascript.png" alt="Javascript" title="Javascript">
+                        </div>
+                        <img class="col s11" src="img/gesso/gesso.png">
+                    </div>
+                </div>
+
+
+                <div class="col l6 m12">
+                    <h2>GESSO MORRO AGUDO</h2>
+                    <h5>
+                        Catálogo simples que extrai os dados de um csv
+
+                        <a href="https://github.com/Loukis-13/gesso-morro-agudo" target="_blank">CÓDIGO NO GITHUB</a>
+                        <a href="https://loukis-13.github.io/gesso-morro-agudo/" target="_blank">GIT PAGE</a>
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col s12 pb-1 grey darken-4">
+                <h2 style="font-size: 2.7vw;">MAIS CONTEUDO EM BREVE</h2>
             </div>
         </div>
 
-
-
-        <div class="grey darken-4 bloco">
-            <h2 style="font-size: 2.7vw; margin: 1.5% 0;">MAIS CONTEUDO EM BREVE</h2>
-        </div>
-
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="index.js"></script>
     </body>
