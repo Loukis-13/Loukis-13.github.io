@@ -36,9 +36,10 @@ html="""
             <img class="col l1 s2 offset-l3" src="img/logos/Python.png" alt="Python" title="Python">
             <img class="col l1 s2" src="img/logos/Javascript.png" alt="Javascript" title="Javascript">
             <img class="col l1 s2" src="img/logos/GO.png" alt="GO" title="GO">
+            <img class="col l1 s2" src="img/logos/C.png" alt="C" title="C">
             <img class="col l1 s2" src="img/logos/C++.png" alt="C++" title="C++">
-            <img class="col l1 s2" src="img/logos/Java.png" alt="Java" title="Java">
             <img class="col l1 s2" src="img/logos/CS.png" alt="C#" title="C#">
+            <img class="col l1 s2" src="img/logos/Java.png" alt="Java" title="Java">
         </div>
     </div>
 
@@ -71,7 +72,7 @@ html="""
 """
 
 diagrama = """
-        <div class="col grey darken-{cor}" style="padding-top: 1% !important;">
+        <div class="col grey darken-{cor}" style="padding-top: 2% !important;">
             <div class="col l6 m12">
                 <div class="row">
                     <div class="col l1 m12 s12">
@@ -83,17 +84,17 @@ diagrama = """
                 </div>
             </div>
             <div class="col l6 m12 s12">
-                <h2>{nome}</h2>
+                <h2 style="margin: 0;">{nome}</h2>
                 <h5>{descrição}</h5>
             </div>
         </div>
 """
-linguagem = '<img class="responsive-img col l12 s2" src="img/logos/{0}.png" alt="{0}" title="{0}" style="padding-top: .75rem;">'
+linguagem = '<img class="responsive-img col l12 s2" src="img/logos/{0}.png" alt="{0}" title="{0}" style="padding: .5rem;">'
 
 x = [
     {
         'nome': 'DUNGEON RAIDERS',
-        'descrição': '''
+        'descrição': '''\
             Jogo digital criado com base no jogo de cartas <a href="https://www.ludopedia.com.br/jogo/dungeon-raiders" target="_blank">Dungeon Raiders</a>.
             Inicialmente feito utilizando Kivy para Python e depois mudado para Phaser 3.
             Versão para um jogador terminada, versão para dois jogadores em desenvolvimento.
@@ -105,6 +106,19 @@ x = [
         'foto': 'img/dungeon/tela1.png',
         'linguagens': [
             'Javascript'
+        ]
+    },
+    {
+        'nome': 'Back End Development and APIs',
+        'descrição': '''
+            APIs desenvolvidas para a certificação do curso "APIs and Microservices" da Free Code Camp.
+            Escritas Node.js e implementadas na plataforma do Heroku, todas as APIs foram reunidas em um único app para melhor manueseio.
+
+            <a href="https://github.com/Loukis-13/FCC_APIs" target="_blank">CÓDIGO NO GITHUB</a>
+        ''',
+        'foto': 'img/FCC_APIs/fcc-apis.png',
+        'linguagens': [
+            'Node'
         ]
     },
     {
@@ -235,6 +249,10 @@ certificacoes = [
     {
         'nome': 'PCAP – Certified Associate in Python Programming',
         'url': 'https://www.credly.com/badges/a2686b60-1493-41af-965c-5e9e08909347/public_url'
+    },
+    {
+        'nome': 'Certified Entry-Level JavaScript Programmer',
+        'url': 'https://www.credly.com/badges/57d503c0-2760-4833-8653-a7f6b052c4df/public_url'
     },
     {
         'nome': 'CCNA: Introduction to Networks',
