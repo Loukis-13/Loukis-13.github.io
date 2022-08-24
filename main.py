@@ -31,7 +31,7 @@ diagrama_html = """\
             <a class="col l8 m4 hide-on-large-only" href="https://www.codewars.com/users/Loukis" target="_blank"><img class="right" src="https://www.codewars.com/users/Loukis/badges/micro"></a>
         </div>
 
-        <h1 class="white-text">JOSÉ NIVALDO DA SILVA HYPÓLITO</h1>
+        <h1 class="white-text" style="margin-top: 0;">JOSÉ NIVALDO DA SILVA HYPÓLITO</h1>
         <h2 class="white-text">DESENVOLVEDOR</h2>
         <div class="langs splide" role="group" style="margin: 0 5%;">
             <div class="splide__track">
@@ -53,6 +53,7 @@ diagrama_html = """\
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="splide/splide.min.js"></script>
+    <script src="splide/splide-extension-auto-scroll.min.js"></script>
     <script>
         url_dados = {{
             'mvs': 'https://colab.research.google.com/drive/1XqWO1akL_v2Rvve8x1E-qQqvRqnI3kxy?usp=sharing',
@@ -66,13 +67,21 @@ diagrama_html = """\
             window.open(url_dados[document.getElementById("opcaoAnaliseDeDados").value])
         }}
 
-        new Splide('.splide', {{
+        new Splide('.splide', {
             type: 'loop',
             drag: 'free',
             perPage: 10,
             arrows: false,
             pagination: false,
-        }}).mount();
+            breakpoints: {
+                640: {
+                    perPage: 4,
+                },
+            },
+            autoScroll: {
+                speed: 1,
+            },
+        }).mount(window.splide.Extensions);
     </script>
 </body>
 
