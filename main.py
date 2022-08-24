@@ -1,4 +1,4 @@
-html="""
+diagrama_html = """\
 <!DOCTYPE html>
 <html>
 
@@ -7,6 +7,7 @@ html="""
     <title>Loukis</title>
     <link rel="shortcut icon" href="img/redes-sociais/git.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="splide/splide.min.css">
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -32,14 +33,12 @@ html="""
 
         <h1 class="white-text">JOSÉ NIVALDO DA SILVA HYPÓLITO</h1>
         <h2 class="white-text">DESENVOLVEDOR</h2>
-        <div class="row">
-            <img class="col l1 s2 offset-l3" src="img/logos/Python.png" alt="Python" title="Python">
-            <img class="col l1 s2" src="img/logos/Javascript.png" alt="Javascript" title="Javascript">
-            <img class="col l1 s2" src="img/logos/GO.png" alt="GO" title="GO">
-            <img class="col l1 s2" src="img/logos/C.png" alt="C" title="C">
-            <img class="col l1 s2" src="img/logos/C++.png" alt="C++" title="C++">
-            <img class="col l1 s2" src="img/logos/CS.png" alt="C#" title="C#">
-            <img class="col l1 s2" src="img/logos/Java.png" alt="Java" title="Java">
+        <div class="langs splide" role="group" style="margin: 0 5%;">
+            <div class="splide__track">
+                <div class="row splide__list" style="display: flex;align-items: center;">
+                    {}
+                </div>
+            </div>
         </div>
     </div>
 
@@ -53,6 +52,7 @@ html="""
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="splide/splide.min.js"></script>
     <script>
         url_dados = {{
             'mvs': 'https://colab.research.google.com/drive/1XqWO1akL_v2Rvve8x1E-qQqvRqnI3kxy?usp=sharing',
@@ -65,13 +65,23 @@ html="""
         function open_dados() {{
             window.open(url_dados[document.getElementById("opcaoAnaliseDeDados").value])
         }}
+
+        new Splide('.splide', {{
+            type: 'loop',
+            drag: 'free',
+            perPage: 10,
+            arrows: false,
+            pagination: false,
+        }}).mount();
     </script>
 </body>
 
-</html>
+</html>\
 """
 
-diagrama = """
+diagrama_linugagem_header = '<img class="col l1 s2 splide__slide" style="margin: 0;" src="img/logos/{0}.png" alt="{1}" title="{1}">'
+
+diagrama_projeto = """
         <div class="col grey darken-{cor}" style="padding-top: 2% !important;">
             <div class="col l6 m12">
                 <div class="row">
@@ -89,9 +99,20 @@ diagrama = """
             </div>
         </div>
 """
-linguagem = '<img class="responsive-img col l12 s2" src="img/logos/{0}.png" alt="{0}" title="{0}" style="padding: .5rem;">'
 
-x = [
+diagrama_projeto_linguagem = '<img class="responsive-img col l12 s2" src="img/logos/{0}.png" alt="{0}" title="{0}" style="padding: .5rem;">'
+
+diagrama_certificacoes = """\
+    <a class="col xl2 l3 s6" href="{url}" target="_blank">
+        <img class="responsive-img" src="img/certificações/{nome}.png" alt="{nome}" title="{nome}" style="padding: 4%;">
+    </a>\
+"""
+
+
+
+lista_linguagens = ["C#", "Java", "Kotlin", "Rust", "Python", "Javascript", "GO",  "Lua", "C", "C++"]
+
+lista_projetos = [
     {
         'nome': 'DUNGEON RAIDERS',
         'descrição': '''\
@@ -110,7 +131,7 @@ x = [
     },
     {
         'nome': 'Back End Development and APIs',
-        'descrição': '''
+        'descrição': '''\
             APIs desenvolvidas para a certificação do curso "APIs and Microservices" da Free Code Camp.
             Escritas Node.js e implementadas na plataforma do Heroku, todas as APIs foram reunidas em um único app para melhor manueseio.
 
@@ -123,7 +144,7 @@ x = [
     },
     {
         'nome': 'DEMONSTAÇÕES DE ANÁLISES DE DADOS',
-        'descrição': '''
+        'descrição': '''\
             Algoritimos de análise, manipulação, criação e transformação de dados, feitos em Python usando as bibliotecas Numpy, Pandas, Matplotlib e Seaborn
 
             <div>
@@ -145,7 +166,7 @@ x = [
     },
     {
         'nome': 'LEITOR ÁGIL',
-        'descrição': '''
+        'descrição': '''\
             Aplicativo para mobiles para ajudar a ler arquivos e documentos rápidamente.
             Feito utilizando Kivy para Python.
 
@@ -161,7 +182,7 @@ x = [
     },
     {
         'nome': 'NOSSA CANTINA',
-        'descrição': '''
+        'descrição': '''\
             O objetivo deste projeto é facilitar e agilizar a compra de produtos nas cantinas escolares para diminuir o tempo gasto em filas.
             Feito utilizando Django para o Back-end, Materialize css para o Front-end e mySQL para o banco de dados.
 
@@ -176,7 +197,7 @@ x = [
     },
     {
         'nome': 'GESSO MORRO AGUDO',
-        'descrição': '''
+        'descrição': '''\
             Catálogo simples que extrai os dados de um csv
 
             <a href="https://github.com/Loukis-13/gesso-morro-agudo" target="_blank">CÓDIGO NO GITHUB</a>
@@ -190,7 +211,7 @@ x = [
     },
     {
         'nome': 'FRASES CÔMICAS DOS PRESIDENTES',
-        'descrição': '''
+        'descrição': '''\
             Microserviço para servir as frases mais cômicas dos presidentes do Brasil
             Feito utilizando Flask para Python
 
@@ -203,7 +224,7 @@ x = [
     },
     {
         'nome': 'Currency API',
-        'descrição': '''
+        'descrição': '''\
             API para realizar trocas entre moedas
 
             Desenvolvida utilizando GOlang para back-end e MongoDB para banco de dados
@@ -228,24 +249,7 @@ x = [
     # },
 ]
 
-texto = ''
-
-for i, p in enumerate(x):
-    p['cor'] = 2+i%2
-    p['linguagens'] = '\n'.join(linguagem.format(j) for j in p['linguagens'])
-    if not 'foto_class' in p: p['foto_class'] = 'col l11 m12 s12'
-
-    texto += diagrama.format(**p)
-
-
-
-certificacoes_diagrama = """
-    <a class="col xl2 l3 s6" href="{url}" target="_blank">
-        <img class="responsive-img" src="img/certificações/{nome}.png" alt="{nome}" title="{nome}" style="padding: 4%;">
-    </a>
-"""
-
-certificacoes = [
+lista_certificacoes = [
     {
         'nome': 'PCAP – Certified Associate in Python Programming',
         'url': 'https://www.credly.com/badges/a2686b60-1493-41af-965c-5e9e08909347/public_url'
@@ -280,7 +284,10 @@ certificacoes = [
     },
 ]
 
-certificacoes_html = ''.join(certificacoes_diagrama.format(**c) for c in certificacoes)
 
 
-open('index2.html', 'w').write(html.format(texto, certificacoes_html))
+open('index.html', 'w').write(diagrama_html.format(
+    "\n".join(diagrama_linugagem_header.format(i if i != 'C#' else 'CS', i) for i in lista_linguagens),
+    "\n".join(diagrama_projeto.format(**{**p, 'cor': 2+i%2, 'foto_class': 'col l11 m12 s12', 'linguagens': '\n'.join(diagrama_projeto_linguagem.format(j) for j in p['linguagens'])}) for i, p in enumerate(lista_projetos)),
+    "\n".join(diagrama_certificacoes.format(**c) for c in lista_certificacoes)
+))
