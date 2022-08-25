@@ -6,12 +6,9 @@ diagrama_html = """\
     <meta charset="UTF-8">
     <title>Loukis</title>
     <link rel="shortcut icon" href="img/redes-sociais/git.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="materialize/materialize.min.css">
     <link rel="stylesheet" href="splide/splide.min.css">
     <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=KoHo&family=Roboto+Mono&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -51,7 +48,6 @@ diagrama_html = """\
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="splide/splide.min.js"></script>
     <script src="splide/splide-extension-auto-scroll.min.js"></script>
     <script>
@@ -67,31 +63,31 @@ diagrama_html = """\
             window.open(url_dados[document.getElementById("opcaoAnaliseDeDados").value])
         }}
 
-        new Splide('.splide', {
+        new Splide('.splide', {{
             type: 'loop',
             drag: 'free',
             perPage: 10,
             arrows: false,
             pagination: false,
-            breakpoints: {
-                640: {
+            breakpoints: {{
+                640: {{
                     perPage: 4,
-                },
-            },
-            autoScroll: {
+                }},
+            }},
+            autoScroll: {{
                 speed: 1,
-            },
-        }).mount(window.splide.Extensions);
+            }},
+        }}).mount(window.splide.Extensions);
     </script>
 </body>
 
 </html>\
 """
 
-diagrama_linugagem_header = '<img class="col l1 s2 splide__slide" style="margin: 0;" src="img/logos/{0}.png" alt="{1}" title="{1}">'
+diagrama_linugagem_header = '<img class="col l1 s2 splide__slide" style="margin: 0;" src="img/logos/{0}.svg" alt="{1}" title="{1}">'
 
 diagrama_projeto = """
-        <div class="col grey darken-{cor}" style="padding-top: 2% !important;">
+        <div class="col grey darken-{cor}" style="padding-top: 2% !important;width: 100%">
             <div class="col l6 m12">
                 <div class="row">
                     <div class="col l1 m12 s12">
@@ -99,7 +95,7 @@ diagrama_projeto = """
                             {linguagens}
                         </div>
                     </div>
-                    <img class="{foto_class}" src="{foto}">
+                    <img class="col l11 m12 s12" src="{foto}">
                 </div>
             </div>
             <div class="col l6 m12 s12">
@@ -109,7 +105,7 @@ diagrama_projeto = """
         </div>
 """
 
-diagrama_projeto_linguagem = '<img class="responsive-img col l12 s2" src="img/logos/{0}.png" alt="{0}" title="{0}" style="padding: .5rem;">'
+diagrama_projeto_linguagem = '<img class="responsive-img col l12 s2" src="img/logos/{0}.svg" alt="{0}" title="{0}" style="padding: .5rem;">'
 
 diagrama_certificacoes = """\
     <a class="col xl2 l3 s6" href="{url}" target="_blank">
@@ -168,7 +164,7 @@ lista_projetos = [
             </div>
             <a href="https://github.com/Loukis-13/FCC_analise_de_dados" target="_blank">CÓDIGO NO GITHUB</a>
         ''',
-        'foto': 'img/analise-de-dados/graficos.jpeg',
+        'foto': 'img/analise-de-dados/graficos.png',
         'linguagens': [
             'Python'
         ]
@@ -184,7 +180,6 @@ lista_projetos = [
             <a href="https://github.com/Loukis-13/Leitor-agil" target="_blank">CÓDIGO NO GITHUB</a>
         ''',
         'foto': 'img/leitor/leitor.png',
-        'foto_class': 'col s6 offset-s3',
         'linguagens': [
             'Python'
         ]
@@ -197,7 +192,7 @@ lista_projetos = [
 
             <a href="https://github.com/Loukis-13/nossa-cantina" target="_blank">CÓDIGO NO GITHUB</a>
         ''',
-        'foto': 'img/nossa-cantina/1.jpg',
+        'foto': 'img/nossa-cantina/1.png',
         'linguagens': [
             'Python',
             'Javascript',
@@ -297,6 +292,6 @@ lista_certificacoes = [
 
 open('index.html', 'w').write(diagrama_html.format(
     "\n".join(diagrama_linugagem_header.format(i if i != 'C#' else 'CS', i) for i in lista_linguagens),
-    "\n".join(diagrama_projeto.format(**{**p, 'cor': 2+i%2, 'foto_class': 'col l11 m12 s12', 'linguagens': '\n'.join(diagrama_projeto_linguagem.format(j) for j in p['linguagens'])}) for i, p in enumerate(lista_projetos)),
+    "\n".join(diagrama_projeto.format(**{**p, 'cor': 2+i%2, 'linguagens': '\n'.join(diagrama_projeto_linguagem.format(j) for j in p['linguagens'])}) for i, p in enumerate(lista_projetos)),
     "\n".join(diagrama_certificacoes.format(**c) for c in lista_certificacoes)
 ))

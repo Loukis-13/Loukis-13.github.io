@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "KoHo";
+    src: url("KoHo/KoHo-Regular.ttf");
+}
+
 body {
     text-align: center;
     font-family: 'KoHo', sans-serif;
