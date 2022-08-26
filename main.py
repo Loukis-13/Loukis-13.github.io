@@ -241,6 +241,22 @@ lista_projetos = [
             'MongoDB'
         ]
     },
+    {
+        'nome': 'Musical',
+        'descrição': '''
+            Micro-APIs para implementar um fluxo com banco de dados, OpenFeign para requesições en tre APIs, Kafka para mensageria e Docker Composer para orquestrar todos os serviços.
+
+            <a href="https://github.com/Loukis-13/musical">CÓDIGO NO GITHUB (Java)</a>
+            <a href="https://github.com/Loukis-13/musical-kotlin">CÓDIGO NO GITHUB (Kotlin)</a>
+        ''',
+        'foto': 'img/musical/musical.png',
+        'linguagens': [
+            'Java',
+            'Kotlin',
+            'Docker',
+            'Kafka'
+        ]
+    },
     # {
     #     'nome': '',
     #     'descrição': '''
