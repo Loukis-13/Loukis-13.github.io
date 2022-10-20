@@ -55,12 +55,11 @@
 
             <a href="https://github.com/Loukis-13/nossa-cantina" target="_blank">C\xD3DIGO NO GITHUB</a>
         `,foto:"img/nossa-cantina/1.png",linguagens:["Python","Javascript","MySQL"]},{nome:"LEITOR \xC1GIL",descri\u00E7\u00E3o:`            Aplicativo para mobiles para ajudar a ler arquivos e documentos r\xE1pidamente.
-            Feito utilizando Kivy para Python.
-
-            <a href="https://mega.nz/file/TzpCmAjD#LFH9cb6-01HEWKOTLQWG39lfwAG61NdIpOUMEsWETmc" target="_blank">ANDROID</a>
-
-            <a href="https://github.com/Loukis-13/Leitor-agil" target="_blank">C\xD3DIGO NO GITHUB</a>
-        `,foto:"img/leitor/leitor.png",linguagens:["Python"]},{nome:"GESSO MORRO AGUDO",descri\u00E7\u00E3o:`            Cat\xE1logo simples que extrai os dados de um csv
+            Primeiramente feito utilizando Kivy para Python e depois atualizado para Flutter.
+            
+            <a href="https://github.com/Loukis-13/leitor_agil" target="_blank">C\xD3DIGO NO GITHUB (Dart)</a>
+            <a href="https://github.com/Loukis-13/Leitor-agil" target="_blank">C\xD3DIGO NO GITHUB (Python)</a>
+        `,foto:"img/leitor/leitor.png",linguagens:["Flutter","Dart"]},{nome:"GESSO MORRO AGUDO",descri\u00E7\u00E3o:`            Cat\xE1logo simples que extrai os dados de um csv
 
             <a href="https://github.com/Loukis-13/gesso-morro-agudo" target="_blank">C\xD3DIGO NO GITHUB</a>
             

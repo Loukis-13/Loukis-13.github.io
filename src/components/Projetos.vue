@@ -130,15 +130,15 @@ const lista_projetos = [
         nome: 'LEITOR ÁGIL',
         descrição: `\
             Aplicativo para mobiles para ajudar a ler arquivos e documentos rápidamente.
-            Feito utilizando Kivy para Python.
-
-            <a href="https://mega.nz/file/TzpCmAjD#LFH9cb6-01HEWKOTLQWG39lfwAG61NdIpOUMEsWETmc" target="_blank">ANDROID</a>
-
-            <a href="https://github.com/Loukis-13/Leitor-agil" target="_blank">CÓDIGO NO GITHUB</a>
+            Primeiramente feito utilizando Kivy para Python e depois atualizado para Flutter.
+            
+            <a href="https://github.com/Loukis-13/leitor_agil" target="_blank">CÓDIGO NO GITHUB (Dart)</a>
+            <a href="https://github.com/Loukis-13/Leitor-agil" target="_blank">CÓDIGO NO GITHUB (Python)</a>
         `,
         foto: 'img/leitor/leitor.png',
         linguagens: [
-            'Python'
+            'Flutter',
+            'Dart'
         ]
     },
     {
