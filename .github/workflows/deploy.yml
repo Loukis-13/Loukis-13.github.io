@@ -1,0 +1,21 @@
+name: Build Vue
+on: [push]
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: install and build
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '16'
+      run: |
+        npm ci
+        npm run build
+        
+    - name: push to gh-pages
+      run: |
+        git add .
+        git commit -m deploy
+        git subtree push --prefix dist origin gh-pages
