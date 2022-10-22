@@ -5,11 +5,12 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: install and build
     - uses: actions/checkout@master
     - uses: actions/setup-node@v1
       with:
         node-version: '16'
+        
+    - name: install and build
       run: |
         npm ci
         npm run build
