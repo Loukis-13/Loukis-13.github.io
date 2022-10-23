@@ -23,6 +23,7 @@ jobs:
         git config --global user.email "ze.zinho-2010@hotmail.com"
         git config --global user.name "Loukis-13"
         git config --global user.password ${{ secrets.GITHUB_TOKEN }}
+        git pull
         git add .
         git commit -m deploy
-        git subtree push -f --prefix dist origin gh-pages
+        git subtree push --prefix dist origin gh-pages
