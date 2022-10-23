@@ -18,12 +18,11 @@ jobs:
         npm ci
         npm run build
         
-    - name: push to gh-pages
-      run: |
-        git config --global user.email "ze.zinho-2010@hotmail.com"
-        git config --global user.name "Loukis-13"
-        git config --global user.password ${{ secrets.GITHUB_TOKEN }}
-        git pull
-        git add .
-        git commit -m deploy
-        git subtree push --prefix dist origin gh-pages
+    - uses: actions/checkout@master
+    - name: deploy
+      uses: s0/git-publish-subdir-action@develop
+      env:
+        REPO: self
+        BRANCH: gh-pages
+        FOLDER: build
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
