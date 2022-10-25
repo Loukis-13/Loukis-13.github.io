@@ -19,7 +19,7 @@ const lista_projetos = [
     {
         nome: 'ESTE SITE',
         descrição: `\
-            Feitocom Vue 3 utilizando Composition API e Vite
+            Feito com Vue 3 utilizando Composition API e Vite
 
             <a href="https://github.com/Loukis-13/Loukis-13.github.io" target="_blank">CÓDIGO NO GITHUB</a>
         `,

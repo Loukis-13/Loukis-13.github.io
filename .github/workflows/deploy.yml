@@ -18,7 +18,6 @@ jobs:
         npm ci
         npm run build
         
-    - uses: actions/checkout@master
     - name: deploy
       uses: s0/git-publish-subdir-action@develop
       env:

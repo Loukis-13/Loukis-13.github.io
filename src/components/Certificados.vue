@@ -49,12 +49,16 @@ const lista_certificacoes = [
         url: 'https://www.codingame.com/certification/Nqr7oPdhLmFhY4TsXnGnyw'
     },
     {
+        nome: 'Coding Speed',
+        url: 'https://www.codingame.com/certification/YiWruQpxHnd4p3Uvh3HNMg'
+    },
+    {
         nome: 'Algorithms',
         url: 'https://www.codingame.com/certification/YYdpk3fEJNVyNlg09LwVgg'
     },
     {
-        nome: 'Coding Speed',
-        url: 'https://www.codingame.com/certification/YiWruQpxHnd4p3Uvh3HNMg'
+        nome: 'Colaboration',
+        url: 'https://www.codingame.com/certification/2UvC_t5Nq5IGgiR9QtGchg'
     },
 ]
 </script>
