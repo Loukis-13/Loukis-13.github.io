@@ -30,6 +30,19 @@ const lista_projetos = [
         ]
     },
     {
+        nome: 'Ray Tracing in One Weekend',
+        descrição: `\
+            Projeto para calcular a trajetória de raios de luz através de objetos.
+            Desenvolvido com base no conteúdo do livro Ray <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank">Tracing in One Weekend</a>
+
+            <a href="https://github.com/Loukis-13/ray-tracing-in-one-weekend" target="_blank">CÓDIGO NO GITHUB</a>
+        `,
+        foto: 'https://github.com/Loukis-13/ray-tracing-in-one-weekend/blob/master/images/image-21.png',
+        linguagens: [
+            'Rust'
+        ]
+    },
+    {
         nome: 'DESAFIO FULLSTACK SIFAT',
         descrição: `\
             Blog com sistema CRUD, composto por Django Framework no backend e VueJS no Frontend.
