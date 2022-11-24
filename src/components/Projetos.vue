@@ -37,7 +37,7 @@ const lista_projetos = [
 
             <a href="https://github.com/Loukis-13/ray-tracing-in-one-weekend" target="_blank">CÓDIGO NO GITHUB</a>
         `,
-        foto: 'https://github.com/Loukis-13/ray-tracing-in-one-weekend/blob/master/images/image-21.png',
+        foto: 'https://raw.githubusercontent.com/Loukis-13/ray-tracing-in-one-weekend/master/images/image-21.png',
         linguagens: [
             'Rust'
         ]
