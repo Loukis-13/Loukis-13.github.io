@@ -60,6 +60,10 @@ const lista_certificacoes = [
         nome: 'Colaboration',
         url: 'https://www.codingame.com/certification/2UvC_t5Nq5IGgiR9QtGchg'
     },
+    {
+        nome: 'Extreme Go Horse',
+        url: 'https://www.gohorsecertification.com.br/'
+    },
 ]
 </script>
 

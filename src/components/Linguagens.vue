@@ -2,7 +2,7 @@
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/vue-splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
-const lista_linguagens = ["C#", "Java", "Kotlin", "Rust", "Python", "Javascript", "GO", "Lua", "Dart", "Bash", "C", "C++"]
+const lista_linguagens = ["Java", "Kotlin", "Rust", "Python", "Javascript", "TypeScript", "GO", "Lua", "Dart", "Bash", "C", "C++", "C#", "BrainFuck"]
 
 const options = {
   type: 'loop',
