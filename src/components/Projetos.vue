@@ -30,10 +30,23 @@ const lista_projetos = [
         ]
     },
     {
+        nome: 'NES emulator in Rust',
+        descrição: `\
+            Emulador do vide-game NES (Nintendo Entertainment System) escrito em Rust
+            Desenvolvido com base no conteúdo do livro <a href="https://bugzmanov.github.io/nes_ebook/chapter_1.html" target="_blank">NES Ebook</a>
+
+            <a href="https://github.com/Loukis-13/NES-emulator-in-Rust" target="_blank">CÓDIGO NO GITHUB</a>
+        `,
+        foto: 'img/emulador-nes/Ferris NES.png',
+        linguagens: [
+            'Rust',
+        ]
+    },
+    {
         nome: 'Ray Tracing in One Weekend',
         descrição: `\
             Projeto para calcular a trajetória de raios de luz através de objetos.
-            Desenvolvido com base no conteúdo do livro Ray <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank">Tracing in One Weekend</a>
+            Desenvolvido com base no conteúdo do livro <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank">Ray Tracing in One Weekend</a>
 
             <a href="https://github.com/Loukis-13/ray-tracing-in-one-weekend" target="_blank">CÓDIGO NO GITHUB</a>
         `,

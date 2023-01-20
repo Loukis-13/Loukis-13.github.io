@@ -9,12 +9,20 @@ const lista_certificacoes = [
         url: 'https://www.credly.com/badges/57d503c0-2760-4833-8653-a7f6b052c4df/public_url'
     },
     {
+        nome: 'English Proficiency C1',
+        url: 'https://www.credly.com/badges/31d824ed-1614-40af-9390-bd591e675392/public_url'
+    },
+    {
         nome: 'CCNA: Introduction to Networks',
         url: 'https://www.credly.com/badges/bc0bb1e5-b019-4aa5-b0c8-27e298873dac/public_url'
     },
     {
         nome: 'CCNA: Switching, Routing, and Wireless Essentials',
         url: 'https://www.credly.com/badges/9c7b0438-aac9-4461-8ff8-15f6874cd5b3/public_url'
+    },
+    {
+        nome: '4YOU2 Certificate',
+        url: 'https://www.credly.com/badges/31d824ed-1614-40af-9390-bd591e675392/public_url'
     },
     {
         nome: 'JavaScript Algorithms and Data Structures',
