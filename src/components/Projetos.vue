@@ -30,6 +30,18 @@ const lista_projetos = [
         ]
     },
     {
+        nome: 'RGit',
+        descrição: `\
+            Simples implementação da ferramenta Git em Ruby para apender os básicos da linguagem
+
+            <a href="https://github.com/Loukis-13/RGit" target="_blank">CÓDIGO NO GITHUB</a>
+        `,
+        foto: 'img/rgit/rgit.png',
+        linguagens: [
+            'Ruby',
+        ]
+    },
+    {
         nome: 'NES emulator in Rust',
         descrição: `\
             Emulador do vide-game NES (Nintendo Entertainment System) escrito em Rust
