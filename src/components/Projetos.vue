@@ -1,215 +1,6 @@
 <script setup>
-const lista_projetos = [
-    {
-        nome: 'DUNGEON RAIDERS',
-        descrição: `\
-            Jogo digital criado com base no jogo de cartas <a href="https://www.ludopedia.com.br/jogo/dungeon-raiders" target="_blank">Dungeon Raiders</a>.
-            Inicialmente feito utilizando Kivy para Python e depois mudado para Phaser 3.
-            Versão para um jogador terminada, versão para dois jogadores em desenvolvimento.
-
-            <a href="https://loukis-13.github.io/Dungeon-Raiders-Phaser/" target="_blank">JOGAR</a>
-
-            <a href="https://github.com/Loukis-13/Dungeon-Raiders-Phaser" target="_blank">CÓDIGO NO GITHUB</a>
-        `,
-        foto: 'img/dungeon/tela1.png',
-        linguagens: [
-            'Javascript'
-        ]
-    },
-    {
-        nome: 'ESTE SITE',
-        descrição: `\
-            Feito com Vue 3 utilizando Composition API e Vite
-
-            <a href="https://github.com/Loukis-13/Loukis-13.github.io" target="_blank">CÓDIGO NO GITHUB</a>
-        `,
-        foto: 'img/portifolio/portifolio.png',
-        linguagens: [
-            'Javascript',
-            'Vue'
-        ]
-    },
-    {
-        nome: 'RGit',
-        descrição: `\
-            Simples implementação da ferramenta Git em Ruby para apender os básicos da linguagem
-
-            <a href="https://github.com/Loukis-13/RGit" target="_blank">CÓDIGO NO GITHUB</a>
-        `,
-        foto: 'img/rgit/rgit.png',
-        linguagens: [
-            'Ruby',
-        ]
-    },
-    {
-        nome: 'NES emulator in Rust',
-        descrição: `\
-            Emulador do vide-game NES (Nintendo Entertainment System) escrito em Rust
-            Desenvolvido com base no conteúdo do livro <a href="https://bugzmanov.github.io/nes_ebook/chapter_1.html" target="_blank">NES Ebook</a>
-
-            <a href="https://github.com/Loukis-13/NES-emulator-in-Rust" target="_blank">CÓDIGO NO GITHUB</a>
-        `,
-        foto: 'img/emulador-nes/Ferris NES.png',
-        linguagens: [
-            'Rust',
-        ]
-    },
-    {
-        nome: 'Ray Tracing in One Weekend',
-        descrição: `\
-            Projeto para calcular a trajetória de raios de luz através de objetos.
-            Desenvolvido com base no conteúdo do livro <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank">Ray Tracing in One Weekend</a>
-
-            <a href="https://github.com/Loukis-13/ray-tracing-in-one-weekend" target="_blank">CÓDIGO NO GITHUB</a>
-        `,
-        foto: 'https://raw.githubusercontent.com/Loukis-13/ray-tracing-in-one-weekend/master/images/image-21.png',
-        linguagens: [
-            'Rust'
-        ]
-    },
-    {
-        nome: 'DESAFIO FULLSTACK SIFAT',
-        descrição: `\
-            Blog com sistema CRUD, composto por Django Framework no backend e VueJS no Frontend.
-
-            O Blog possui um sistema de curtidas de cada post e criação/modificação/deleção de posts, sendo as duas funcionalidades feitas sem que haja atualização das páginas do sistema, por meio de chamadas assíncronas ao backend.
-
-            <a href="https://github.com/Loukis-13/desafio-fullstack-sifat" target="_blank">CÓDIGO NO GITHUB</a>
-        `,
-        foto: 'img/desafio-sifat/demo.gif',
-        linguagens: [
-            'Python',
-            'Javascript',
-            'Vue'
-        ]
-    },
-    {
-        nome: 'Musical',
-        descrição: `
-            Micro-APIs para implementar um fluxo com banco de dados, OpenFeign para requesições en tre APIs, Kafka para mensageria e Docker Composer para orquestrar todos os serviços.
-
-            <a href="https://github.com/Loukis-13/musical">CÓDIGO NO GITHUB (Java)</a>
-            <a href="https://github.com/Loukis-13/musical-kotlin">CÓDIGO NO GITHUB (Kotlin)</a>
-        `,
-        foto: 'img/musical/musical.png',
-        linguagens: [
-            'Java',
-            'Kotlin',
-            'Docker',
-            'Kafka'
-        ]
-    },
-    {
-        nome: 'Currency API',
-        descrição: `\
-            API para realizar trocas entre moedas
-
-            Desenvolvida utilizando GOlang para back-end e MongoDB para banco de dados
-            
-            <a href="https://github.com/Loukis-13/currency-API-GO" target="_blank">CÓDIGO NO GITHUB</a>
-        `,
-        foto: 'img/go-currency-api/go-currency-api.png',
-        linguagens: [
-            'GO',
-            'MongoDB'
-        ]
-    },
-    {
-        nome: 'Back End Development and APIs',
-        descrição: `\
-            APIs desenvolvidas para a certificação do curso "APIs and Microservices" da Free Code Camp.
-            Escritas Node.js e implementadas na plataforma do Heroku, todas as APIs foram reunidas em um único app para melhor manueseio.
-
-            <a href="https://github.com/Loukis-13/FCC_APIs" target="_blank">CÓDIGO NO GITHUB</a>
-        `,
-        foto: 'img/FCC_APIs/fcc-apis.png',
-        linguagens: [
-            'Node'
-        ]
-    },
-    {
-        nome: 'DEMONSTAÇÕES DE ANÁLISES DE DADOS',
-        descrição: `\
-            Algoritimos de análise, manipulação, criação e transformação de dados, feitos em Python usando as bibliotecas Numpy, Pandas, Matplotlib e Seaborn
-
-            <div>
-                <select id="opcaoAnaliseDeDados" class="browser-default">
-                    <option value="mvs" selected>Mean Variance Standard-deviation Calculator</option>
-                    <option value="medical_data">Medical Data Visualizer</option>
-                    <option value="demographic">Demographic Data Analyzer</option>
-                    <option value="page_view">Page View Time Series Visualizer</option>
-                    <option value="sea_level">Sea Level Predictor</option>
-                </select>
-                <button class="btn" onclick="open_dados()">ABRIR</button>
-            </div>
-            <a href="https://github.com/Loukis-13/FCC_analise_de_dados" target="_blank">CÓDIGO NO GITHUB</a>
-        `,
-        foto: 'img/analise-de-dados/graficos.png',
-        linguagens: [
-            'Python'
-        ]
-    },
-    {
-        nome: 'NOSSA CANTINA',
-        descrição: `\
-            O objetivo deste projeto é facilitar e agilizar a compra de produtos nas cantinas escolares para diminuir o tempo gasto em filas.
-            Feito utilizando Django para o Back-end, Materialize css para o Front-end e mySQL para o banco de dados.
-
-            <a href="https://github.com/Loukis-13/nossa-cantina" target="_blank">CÓDIGO NO GITHUB</a>
-        `,
-        foto: 'img/nossa-cantina/1.png',
-        linguagens: [
-            'Python',
-            'Javascript',
-            'MySQL'
-        ]
-    },
-    {
-        nome: 'LEITOR ÁGIL',
-        descrição: `\
-            Aplicativo para mobiles para ajudar a ler arquivos e documentos rápidamente.
-            Primeiramente feito utilizando Kivy para Python e depois atualizado para Flutter.
-            
-            <a href="https://github.com/Loukis-13/leitor_agil" target="_blank">CÓDIGO NO GITHUB (Dart)</a>
-            <a href="https://github.com/Loukis-13/Leitor-agil" target="_blank">CÓDIGO NO GITHUB (Python)</a>
-        `,
-        foto: 'img/leitor/leitor.png',
-        linguagens: [
-            'Flutter',
-            'Dart'
-        ]
-    },
-    {
-        nome: 'GESSO MORRO AGUDO',
-        descrição: `\
-            Catálogo simples que extrai os dados de um csv
-
-            <a href="https://github.com/Loukis-13/gesso-morro-agudo" target="_blank">CÓDIGO NO GITHUB</a>
-            
-            <a href="https://loukis-13.github.io/gesso-morro-agudo/" target="_blank">GIT PAGE</a>
-        `,
-        foto: 'img/gesso/gesso.png',
-        linguagens: [
-            'Python',
-            'Javascript'
-        ]
-    },
-    {
-        nome: 'FRASES CÔMICAS DOS PRESIDENTES',
-        descrição: `\
-            Microserviço para servir as frases mais cômicas dos presidentes do Brasil
-            Feito utilizando Flask para Python
-
-            <a href="https://github.com/Loukis-13/frases_presidentes" target="_blank">CÓDIGO NO GITHUB</a>
-
-            <a href="https://loukis-13.github.io/frases_presidentes/" target="_blank">GIT PAGE</a>
-        `,
-        foto: 'img/frases-comicas-dos-presidentes/frases-comicas-dos-presidentes.png',
-        linguagens: [
-            'Python'
-        ]
-    },
-]
+import { Splide, SplideTrack, SplideSlide } from '@splidejs/vue-splide';
+import Projeto from '@/components/Projeto.vue'
 
 const url_dados = {
     mvs: 'https://colab.research.google.com/drive/1XqWO1akL_v2Rvve8x1E-qQqvRqnI3kxy?usp=sharing',
@@ -225,20 +16,183 @@ function open_dados() {
 </script>
 
 <template>
-    <div v-for="(p, i) in lista_projetos" :class="`col grey darken-${i%2+2}`" style="padding-top: 2% !important;width: 100%">
-        <div class="col l6 m12">
-            <div class="row">
-                <div class="col l1 m12 s12">
-                    <div class="row">
-                        <img v-for="x in p.linguagens" class="responsive-img col l12 s2" :src="`img/logos/${x}.svg`" :alt="x" :title="x" style="padding: .5rem;">
-                    </div>
-                </div>
-                <img class="col l11 m12 s12" :src="p.foto">
-            </div>
+    <Projeto 
+        nome="DUNGEON RAIDERS" 
+        foto="/projetos/dungeon/tela1.png"
+        repositorio="https://github.com/Loukis-13/Dungeon-Raiders-Phaser"
+        pagina="https://loukis-13.github.io/Dungeon-Raiders-Phaser/"
+        :linguagens="['Javascript']"
+    >
+        Jogo digital criado com base no jogo de cartas <a class="text-blue-600" href="https://www.ludopedia.com.br/jogo/dungeon-raiders" target="_blank">Dungeon Raiders</a>.<br />
+        Inicialmente feito utilizando Kivy para Python e depois migrado para Phaser 3.<br />
+        Versão para um jogador terminada, versão para dois jogadores em desenvolvimento.<br />
+        <br />
+        <a class="text-blue-600" href="https://loukis-13.github.io/Dungeon-Raiders-Phaser/" target="_blank">JOGAR</a>
+    </Projeto>
+
+    <Projeto 
+        nome="ESTE SITE" 
+        foto="/projetos/portifolio/portifolio.png"
+        repositorio="https://github.com/Loukis-13/Loukis-13.github.io"
+        :linguagens="['Javascript', 'Node', 'Vue', 'Vitejs']"
+    >
+        Meu espaço pessoal para expor meus projetos.<br/>
+        Feito com <a class="text-blue-600" href="https://vitejs.dev/" target="_blank">Vite</a>.
+    </Projeto>
+
+    <Projeto 
+        nome="RGit" 
+        foto="/projetos/rgit/rgit.png"
+        repositorio="https://github.com/Loukis-13/RGit"
+        :linguagens="['Ruby']"
+    >
+        Simples implementação da ferramenta Git em Ruby para apender os básicos da linguagem
+    </Projeto>
+
+    <Projeto 
+        nome="NES emulator in Rust" 
+        foto="/projetos/emulador-nes/Ferris NES.png"
+        repositorio="https://github.com/Loukis-13/NES-emulator-in-Rust"
+        :linguagens="['Rust']"
+    >
+        Emulador do vide-game NES (Nintendo Entertainment System) escrito em Rust<br/>
+        Desenvolvido com base no conteúdo do livro <a class="text-blue-600" href="https://bugzmanov.github.io/nes_ebook/chapter_1.html" target="_blank">NES Ebook</a>
+    </Projeto>
+
+    <Projeto 
+        nome="Ray Tracing in One Weekend" 
+        foto="https://raw.githubusercontent.com/Loukis-13/ray-tracing-in-one-weekend/master/images/image-21.png"
+        repositorio="https://github.com/Loukis-13/ray-tracing-in-one-weekend"
+        :linguagens="['Rust']"
+    >
+        Projeto para calcular a trajetória de raios de luz através de objetos.<br/>
+        Desenvolvido com base no conteúdo do livro <a class="text-blue-600" href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank">Ray Tracing in One Weekend</a>
+    </Projeto>
+
+    <Projeto 
+        nome="FOREX TRADING" 
+        foto="/projetos/forex-trading/forex-trading.png"
+        repositorio="https://github.com/Loukis-13/Forex-Trading"
+        pagina="https://loukis-13.github.io/Forex-Trading/"
+        :linguagens="['Javascript', 'Node', 'React', 'Nextjs']"
+    >
+        Aplicação checar a taxa de cambio entre multiplas moedas fácilmente.<br/>
+        <br/>
+        Dados monetários extraídos de <a class="text-blue-600" href="https://exchangerate.host/" target="_blank">exchangerate.host</a><br/>
+    </Projeto>
+
+    <Projeto 
+        nome="DESAFIO FULLSTACK SIFAT" 
+        foto="/projetos/desafio-sifat/demo.webp"
+        repositorio="https://github.com/Loukis-13/desafio-fullstack-sifat"
+        :linguagens="['Python', 'Javascript', 'Vue']"
+    >
+        Blog com sistema CRUD, composto por Django Framework no backend e VueJS no Frontend.<br/>
+        <br/>
+        O Blog possui um sistema de curtidas de cada post e criação/modificação/deleção de posts, sendo as duas funcionalidades feitas sem que haja atualização das páginas do sistema, por meio de chamadas assíncronas ao backend.
+    </Projeto>
+
+    <Projeto 
+        nome="Musical" 
+        foto="/projetos/musical/musical.png"
+        repositorio="https://github.com/Loukis-13/musical-kotlin"
+        :linguagens="['Java', 'Kotlin', 'Docker', 'Kafka']"
+    >
+        Micro-APIs para implementar um fluxo com banco de dados, OpenFeign para requesições en tre APIs, Kafka para mensageria e Docker Composer para orquestrar todos os serviços.<br/>
+        <br/>
+        <a class="text-blue-600" href="https://github.com/Loukis-13/musical">Versão em Java</a>
+    </Projeto>
+
+    <Projeto 
+        nome="Currency API" 
+        foto="/projetos/go-currency-api/go-currency-api.png"
+        repositorio="https://github.com/Loukis-13/currency-API-GO"
+        :linguagens="['GO', 'MongoDB']"
+    >
+        API para realizar trocas entre moedas<br/>
+        <br/>
+        Desenvolvida utilizando GOlang para back-end e MongoDB para banco de dados
+    </Projeto>
+
+    <Projeto 
+        nome="DEMONSTAÇÕES DE ANÁLISES DE DADOS" 
+        foto="/projetos/analise-de-dados/graficos.png"
+        repositorio="https://github.com/Loukis-13/FCC_analise_de_dados" 
+        :linguagens="['Python']"
+    >
+        Algoritimos de análise, manipulação, criação e transformação de dados, feitos em Python usando as bibliotecas
+        Numpy, Pandas, Matplotlib e Seaborn.<br />
+        <br />
+        <div>
+            <select id="opcaoAnaliseDeDados" class="border border-gray-300 text-gray-900 block w-full p-2">
+                <option value="mvs" selected>Mean Variance Standard-deviation Calculator</option>
+                <option value="medical_data">Medical Data Visualizer</option>
+                <option value="demographic">Demographic Data Analyzer</option>
+                <option value="page_view">Page View Time Series Visualizer</option>
+                <option value="sea_level">Sea Level Predictor</option>
+            </select>
+            <br />
+            <button class="bg-gray-600 p-2 rounded text-white" @click="open_dados">ABRIR</button>
         </div>
-        <div class="col l6 m12 s12">
-            <h2 style="margin: 0;">{{p.nome}}</h2>
-            <h5 v-html="p.descrição"></h5>
-        </div>
-    </div>
+    </Projeto>
+
+    <Projeto 
+        nome="Back End Development and APIs" 
+        foto="/projetos/FCC_APIs/fcc-apis.png"
+        repositorio="https://github.com/Loukis-13/FCC_APIs"
+        :linguagens="['Node']"
+    >
+        APIs desenvolvidas para a certificação do curso "APIs and Microservices" da Free Code Camp.<br/>
+        Escritas Node.js e implementadas na plataforma do Heroku, todas as APIs foram reunidas em um único app para melhor manueseio.
+    </Projeto>
+
+    <Projeto 
+        nome="NOSSA CANTINA"
+        repositorio="https://github.com/Loukis-13/nossa-cantina"
+        :linguagens="['Python', 'Javascript', 'MySQL']"
+    >
+        <template v-slot:imagem>
+            <Splide :options="{type: 'loop'}" class="w-full">
+                <SplideSlide v-for="i in '123456'" class="w-full flex items-center">
+                    <img :src="`/projetos/nossa-cantina/${i}.png`" />
+                </SplideSlide>
+            </Splide>
+        </template>
+
+        O objetivo deste projeto é facilitar e agilizar a compra de produtos nas cantinas escolares para diminuir o tempo gasto em filas.<br/>
+        Feito utilizando Django para o Back-end, Materialize css para o Front-end e mySQL para o banco de dados.
+    </Projeto>
+
+    <Projeto 
+        nome="LEITOR ÁGIL" 
+        foto="/projetos/leitor/leitor.png"
+        repositorio="https://github.com/Loukis-13/leitor_agil"
+        :linguagens="['Flutter', 'Dart']"
+    >
+        Aplicativo para mobiles para ajudar a ler arquivos e documentos rápidamente.<br/>
+        Primeiramente feito utilizando Kivy para Python e depois atualizado para Flutter.<br/>
+        <br/>
+        <a class="text-blue-600" href="https://github.com/Loukis-13/Leitor-agil" target="_blank">Versão em Python</a>
+    </Projeto>
+
+    <Projeto 
+        nome="GESSO MORRO AGUDO" 
+        foto="/projetos/gesso/gesso.png"
+        repositorio="https://github.com/Loukis-13/gesso-morro-agudo"
+        pagina="https://loukis-13.github.io/gesso-morro-agudo/"
+        :linguagens="['Python', 'Javascript']"
+    >
+        Catálogo simples que extrai os dados de um csv<br/>
+    </Projeto>
+
+    <Projeto 
+        nome="FRASES CÔMICAS DOS PRESIDENTES" 
+        foto="/projetos/frases-comicas-dos-presidentes/frases-comicas-dos-presidentes.png"
+        repositorio="https://github.com/Loukis-13/frases_presidentes"
+        pagina="https://loukis-13.github.io/frases_presidentes/"
+        :linguagens="['Python']"
+    >
+        Microserviço para servir as frases mais cômicas dos presidentes do Brasil<br/>
+        Feito utilizando Flask para Python<br/>
+    </Projeto>
 </template>

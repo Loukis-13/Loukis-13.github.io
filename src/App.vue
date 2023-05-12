@@ -1,7 +1,7 @@
 <script setup>
 import Linguagens from "./components/Linguagens.vue"
 import Projetos from "./components/Projetos.vue"
-import Certificados from "./components/Certificados.vue"
+import Certificacoes from "./components/Certificacoes.vue"
 
 const redesSociais = [
     ["git.png", "https://github.com/Loukis-13"],
@@ -15,30 +15,28 @@ const redesSociais = [
 
 <template>
     <div class="grey lighten-2">
-        <div class="black" style="padding-bottom: 1% !important;">
-            <div class="row valign-wrapper">
-                <div class="col l5 m8">
-                    <div class="row grey" style="border-bottom-right-radius: 3vw;">
-                        <a v-for="[i, j] in redesSociais" class="col s2" :href="j" target="_blank">
-                            <img class="responsive-img" :src="'img/redes-sociais/'+i" style="height: ; padding: 2%;">
-                        </a>
-                    </div>
+        <div class="bg-black pb-2">
+            <div class="flex items-center justify-between">
+                <div class="basis-2/3 lg:basis-1/2 grid grid-cols-6 gap-3 lg:gap-5 bg-neutral-400 rounded-br-3xl p-1">
+                    <a v-for="[i, j] in redesSociais" :href="j" target="_blank">
+                        <img class="p-1" :src="'/redes-sociais/'+i" />
+                    </a>
                 </div>
-                <a class="col l7 m4 hide-on-med-and-down" href="https://www.codewars.com/users/Loukis" target="_blank"><img class="right" src="https://www.codewars.com/users/Loukis/badges/large"></a>
-                <a class="col l7 m4 hide-on-large-only" href="https://www.codewars.com/users/Loukis" target="_blank"><img class="right" src="https://www.codewars.com/users/Loukis/badges/micro"></a>
+                <a class="me-3 hidden lg:block" href="https://www.codewars.com/users/Loukis" target="_blank"><img class="right" src="https://www.codewars.com/users/Loukis/badges/large"></a>
+                <a class="me-3 block lg:hidden" href="https://www.codewars.com/users/Loukis" target="_blank"><img class="right" src="https://www.codewars.com/users/Loukis/badges/micro"></a>
             </div>
 
-            <h1 class="white-text" style="margin-top: 0;">JOSÉ NIVALDO DA SILVA HYPÓLITO</h1>
-            <h2 class="white-text">DESENVOLVEDOR</h2>
+            <h1 class="text-white text-3xl lg:text-6xl mt-5 lg:my-8">JOSÉ NIVALDO DA SILVA HYPÓLITO</h1>
+            <h2 class="text-white text-2xl lg:text-5xl my-2 lg:my-5">DESENVOLVEDOR</h2>
             <Linguagens />
         </div>
 
-        <div class="row" style="margin-bottom: 0;">
+        <div class="row">
             <Projetos />
 
-            <div class="col s12 grey darken-4" style="padding-bottom: 3%;">
-                <h2 class="white-text" style="margin: 3% 0;">CERTIFICAÇÕES</h2>
-                <Certificados />
+            <div class="bg-neutral-900 text-neutral-400 p-3">
+                <h2 class="white-text text-5xl m-6">CERTIFICAÇÕES</h2>
+                <Certificacoes />
             </div>
         </div>
     </div>
@@ -61,19 +59,5 @@ h5 {
 
 code {
     white-space: pre-line;
-}
-
-.m-1 {
-    margin: 1% !important;
-}
-
-@media only screen and (max-width: 600px) {
-    h1 {
-        font-size: 10vw;
-    }
-
-    h2 {
-        font-size: 9vw;
-    }
 }
 </style>

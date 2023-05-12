@@ -2,7 +2,7 @@
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/vue-splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
-const lista_linguagens = ["Java", "Kotlin", "Rust", "Python", "Javascript", "TypeScript", "GO", "Lua", "Dart", "Ruby", "Bash", "C", "C++", "C#", "BrainFuck"]
+const lista_linguagens = ["Java", "Kotlin", "Rust", "Python", "Javascript", "TypeScript", "GO", "Lua", "Dart", "Ruby", "Bash", "C", "C++", "C#", "BrainFuck", "Clojure"]
 
 const options = {
   type: 'loop',
@@ -17,10 +17,10 @@ const options = {
 </script>
 
 <template>
-  <Splide :options="options" :extensions="{ AutoScroll }" :has-track="false" class="langs" style="margin: 0 5%;">
-    <SplideTrack class="row" style="display: flex;align-items: center;">
-      <SplideSlide v-for="l in lista_linguagens" class="col l1 s2" style="display: flex; align-items: center;">
-        <img :src="`img/logos/${l=='C#' ? 'CS' : l}.svg`" :alt="l" :title="l" style="max-width: 100%; width: 100%; margin: 0;" />
+  <Splide :options="options" :extensions="{ AutoScroll }" :has-track="false" class="langs mx-10 lg:mx-16">
+    <SplideTrack class="flex items-center justify-between">
+      <SplideSlide v-for="l in lista_linguagens" class="flex items-center p-2">
+        <img :src="`/logos/${l=='C#' ? 'CS' : l}.svg`" class="w-full" :alt="l" :title="l" />
       </SplideSlide>
     </SplideTrack>
   </Splide>
