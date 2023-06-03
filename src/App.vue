@@ -10,6 +10,7 @@ const redesSociais = [
     ["dio.png", "https://web.digitalinnovation.one/users/ze_zinho-2010?tab=achievements"],
     ["codingame.svg", "https://www.codingame.com/profile/ddb616fcb36cc5ab528b00c539d62bab8607605"],
     ["fcc.png", "https://www.freecodecamp.org/loukis"],
+    ["exercism.svg", "https://exercism.org/profiles/Loukis-13"],
 ]
 </script>
 
@@ -17,9 +18,9 @@ const redesSociais = [
     <div class="grey lighten-2">
         <div class="bg-black pb-2">
             <div class="flex items-center justify-between">
-                <div class="basis-2/3 lg:basis-1/2 grid grid-cols-6 gap-3 lg:gap-5 bg-neutral-400 rounded-br-3xl p-1">
+                <div class="basis-2/3 lg:basis-1/2 grid grid-cols-7 gap-3 lg:gap-5 bg-neutral-400 rounded-br-3xl p-1">
                     <a v-for="[i, j] in redesSociais" :href="j" target="_blank">
-                        <img class="p-1" :src="'/redes-sociais/'+i" />
+                        <img class="p-1 aspect-square" :src="'/redes-sociais/'+i" style="filter: drop-shadow(0px 0px 5px white);" />
                     </a>
                 </div>
                 <a class="me-3 hidden lg:block" href="https://www.codewars.com/users/Loukis" target="_blank"><img class="right" src="https://www.codewars.com/users/Loukis/badges/large"></a>

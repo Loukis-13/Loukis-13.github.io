@@ -1,5 +1,5 @@
 <script setup>
-import { Splide, SplideTrack, SplideSlide } from '@splidejs/vue-splide';
+import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import Projeto from '@/components/Projeto.vue'
 
 const url_dados = {
@@ -16,6 +16,15 @@ function open_dados() {
 </script>
 
 <template>
+    <!-- <Projeto 
+        nome="" 
+        foto=""
+        repositorio=""
+        pagina=""
+        :linguagens="[]"
+    >
+    </Projeto> -->
+
     <Projeto 
         nome="DUNGEON RAIDERS" 
         foto="/projetos/dungeon/tela1.png"
@@ -23,30 +32,21 @@ function open_dados() {
         pagina="https://loukis-13.github.io/Dungeon-Raiders-Phaser/"
         :linguagens="['Javascript']"
     >
-        Jogo digital criado com base no jogo de cartas <a class="text-blue-600" href="https://www.ludopedia.com.br/jogo/dungeon-raiders" target="_blank">Dungeon Raiders</a>.<br />
+        Jogo digital criado com base no jogo de cartas <a class="text-blue-500" href="https://www.ludopedia.com.br/jogo/dungeon-raiders" target="_blank">Dungeon Raiders</a>.<br />
         Inicialmente feito utilizando Kivy para Python e depois migrado para Phaser 3.<br />
         Versão para um jogador terminada, versão para dois jogadores em desenvolvimento.<br />
         <br />
-        <a class="text-blue-600" href="https://loukis-13.github.io/Dungeon-Raiders-Phaser/" target="_blank">JOGAR</a>
+        <a class="text-blue-500" href="https://loukis-13.github.io/Dungeon-Raiders-Phaser/" target="_blank">JOGAR</a>
     </Projeto>
 
     <Projeto 
         nome="ESTE SITE" 
-        foto="/projetos/portifolio/portifolio.png"
+        foto="/projetos/portfolio.png"
         repositorio="https://github.com/Loukis-13/Loukis-13.github.io"
-        :linguagens="['Javascript', 'Node', 'Vue', 'Vitejs']"
+        :linguagens="['Javascript', 'Node', 'Vue', 'Vitejs', 'Tailwind']"
     >
         Meu espaço pessoal para expor meus projetos.<br/>
-        Feito com <a class="text-blue-600" href="https://vitejs.dev/" target="_blank">Vite</a>.
-    </Projeto>
-
-    <Projeto 
-        nome="RGit" 
-        foto="/projetos/rgit/rgit.png"
-        repositorio="https://github.com/Loukis-13/RGit"
-        :linguagens="['Ruby']"
-    >
-        Simples implementação da ferramenta Git em Ruby para apender os básicos da linguagem
+        Feito com <a class="text-blue-500" href="https://vuejs.org/" target="_blank">Vue.js</a>.
     </Projeto>
 
     <Projeto 
@@ -56,7 +56,7 @@ function open_dados() {
         :linguagens="['Rust']"
     >
         Emulador do vide-game NES (Nintendo Entertainment System) escrito em Rust<br/>
-        Desenvolvido com base no conteúdo do livro <a class="text-blue-600" href="https://bugzmanov.github.io/nes_ebook/chapter_1.html" target="_blank">NES Ebook</a>
+        Desenvolvido com base no conteúdo do livro <a class="text-blue-500" href="https://bugzmanov.github.io/nes_ebook/chapter_1.html" target="_blank">NES Ebook</a>
     </Projeto>
 
     <Projeto 
@@ -66,7 +66,18 @@ function open_dados() {
         :linguagens="['Rust']"
     >
         Projeto para calcular a trajetória de raios de luz através de objetos.<br/>
-        Desenvolvido com base no conteúdo do livro <a class="text-blue-600" href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank">Ray Tracing in One Weekend</a>
+        Desenvolvido com base no conteúdo do livro <a class="text-blue-500" href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank">Ray Tracing in One Weekend</a>
+    </Projeto>
+
+    <Projeto 
+        nome="RSA® implementations" 
+        foto="/projetos/rsa.png"
+        repositorio="https://github.com/Loukis-13/RSA-implementations"
+        :linguagens="['Python', 'Rust']"
+    >
+        Implementações do algoritmo RSA em diferentes linguagens utilizando diferentes bibliotecas, 
+        com a implementação mais eficiente sendo em Python usando a biblioteca gmpy2, 
+        conseguindo gerar chaves de 4096 em menos de 1 segundo e 10000 bits em 1 minuto e 50 segundos.
     </Projeto>
 
     <Projeto 
@@ -74,11 +85,20 @@ function open_dados() {
         foto="/projetos/forex-trading/forex-trading.png"
         repositorio="https://github.com/Loukis-13/Forex-Trading"
         pagina="https://loukis-13.github.io/Forex-Trading/"
-        :linguagens="['Javascript', 'Node', 'React', 'Nextjs']"
+        :linguagens="['Javascript', 'Node', 'React', 'Nextjs', 'Tailwind']"
     >
         Aplicação checar a taxa de cambio entre multiplas moedas fácilmente.<br/>
         <br/>
-        Dados monetários extraídos de <a class="text-blue-600" href="https://exchangerate.host/" target="_blank">exchangerate.host</a><br/>
+        Dados monetários extraídos de <a class="text-blue-500" href="https://exchangerate.host/" target="_blank">exchangerate.host</a><br/>
+    </Projeto>
+
+    <Projeto 
+        nome="RGit" 
+        foto="/projetos/rgit/rgit.png"
+        repositorio="https://github.com/Loukis-13/RGit"
+        :linguagens="['Ruby']"
+    >
+        Simples implementação da ferramenta Git em Ruby para apender os básicos da linguagem
     </Projeto>
 
     <Projeto 
@@ -100,7 +120,7 @@ function open_dados() {
     >
         Micro-APIs para implementar um fluxo com banco de dados, OpenFeign para requesições en tre APIs, Kafka para mensageria e Docker Composer para orquestrar todos os serviços.<br/>
         <br/>
-        <a class="text-blue-600" href="https://github.com/Loukis-13/musical">Versão em Java</a>
+        <a class="text-blue-500" href="https://github.com/Loukis-13/musical">Versão em Java</a>
     </Projeto>
 
     <Projeto 
@@ -143,7 +163,7 @@ function open_dados() {
         :linguagens="['Node']"
     >
         APIs desenvolvidas para a certificação do curso "APIs and Microservices" da Free Code Camp.<br/>
-        Escritas Node.js e implementadas na plataforma do Heroku, todas as APIs foram reunidas em um único app para melhor manueseio.
+        <!-- Escritas Node.js e implementadas na plataforma do Heroku, todas as APIs foram reunidas em um único app para melhor manueseio. -->
     </Projeto>
 
     <Projeto 
@@ -172,7 +192,7 @@ function open_dados() {
         Aplicativo para mobiles para ajudar a ler arquivos e documentos rápidamente.<br/>
         Primeiramente feito utilizando Kivy para Python e depois atualizado para Flutter.<br/>
         <br/>
-        <a class="text-blue-600" href="https://github.com/Loukis-13/Leitor-agil" target="_blank">Versão em Python</a>
+        <a class="text-blue-500" href="https://github.com/Loukis-13/Leitor-agil" target="_blank">Versão em Python</a>
     </Projeto>
 
     <Projeto 
