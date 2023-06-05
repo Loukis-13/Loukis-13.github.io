@@ -93,6 +93,20 @@ function open_dados() {
     </Projeto>
 
     <Projeto 
+        nome="InterFatecs" 
+        foto="/projetos/InterFatecs.png"
+        repositorio="https://github.com/Loukis-13/InterFatecs"
+        :linguagens="['Python']"
+    >
+        Repositório de Problemas da Maratona de Programação <a class="text-blue-500" href="https://interfatecs.com.br/" target="_blank">InterFatecs</a>.
+        <br/>
+        No momento o repositório contém os problemas das maratonas de 2021 a 2023.
+        <br/>
+        <br/>
+        Participei da maratona de 2022, ficando em 5° lugar e agora participo da maratona de 2023.
+    </Projeto>
+
+    <Projeto 
         nome="RGit" 
         foto="/projetos/rgit/rgit.png"
         repositorio="https://github.com/Loukis-13/RGit"
