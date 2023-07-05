@@ -1,0 +1,92 @@
+[
+    {
+        "kyu": "5",
+        "name": "Users' pets and JSON data: Part 4",
+        "link": "https://www.codewars.com/kata/6481e0cf55c8621eb1389a65",
+        "query": "with pet_count as (\n  select distinct\n    case\n      when (info->>'age')::int between 18 and 30 then '18-30'\n      when (info->>'age')::int between 31 and 45 then '31-45'\n      when (info->>'age')::int between 46 and 60 then '46-60'\n      else '61 and above'\n    end age_group,\n    pet->>'type' pet_type,\n    count(pet->>'type') count\n  from\n    users,\n    jsonb_array_elements(info->'pets') pets(pet)\n  group by age_group, pet_type\n)\nselect distinct on (age_group)\n  age_group,\n  array_agg(pet_type order by pet_type) preferred_pet_type,\n  max(count) count\nfrom pet_count\ngroup by age_group, count\norder by age_group, count desc;"
+    },
+    {
+        "kyu": "5",
+        "name": "Users' pets and JSON data: Part 3",
+        "link": "https://www.codewars.com/kata/647ede2fe4d998004ad24995",
+        "query": "select\n  case\n    when (info->>'age')::int between 18 and 30 then '18-30'\n    when (info->>'age')::int between 21 and 45 then '31-45'\n    when (info->>'age')::int between 46 and 60 then '46-60'\n    when (info->>'age')::int >= 61 then '61 and above'\n  end age_group,\n  round(avg(jsonb_array_length(info->'pets')), 1) avg_pet_count,\n  (array_agg(info->>'name' order by jsonb_array_length(info->'pets') desc, id))[1] max_pet_owner,\n  max(jsonb_array_length(info->'pets')) max_pet_count\nfrom users\ngroup by age_group\norder by avg_pet_count desc, age_group;"
+    },
+    {
+        "kyu": "5",
+        "name": "Users' pets and JSON data: Part 2",
+        "link": "https://www.codewars.com/kata/6479b3a881616a003732a726",
+        "query": "select\n  substring(pets->>'name', 1, 1) first_letter,\n  count(1) pet_count,\n  (select string_agg(info->>'name', ', ')\n   from array_agg(distinct id order by id) u(i)\n   join users on id = any(i)) user_names\nfrom\n  users,\n  jsonb_array_elements(info->'pets') pets\ngroup by 1\norder by 2 desc, 1;"
+    },
+    {
+        "kyu": "6",
+        "name": "Users' pets and JSON data: Part 1",
+        "link": "https://www.codewars.com/kata/64775418ac16620042e2efce",
+        "query": "select\n  id,\n  info->>'name' user_name,\n  string_agg(pets.name, ', ') pet_names\nfrom users\njoin jsonb_array_elements_text(jsonb_path_query_array(info, '$.pets[*].name')) pets(name) on true\nwhere pets.name like 'M%'\ngroup by id\norder by id;"
+    },
+    {
+        "kyu": "5",
+        "name": "Using LATERAL JOIN To Get Top N per Group",
+        "link": "https://www.codewars.com/kata/5820176255c3d23f360000a9/sql",
+        "query": "select\n  c.id category_id,\n  c.category,\n  p.title,\n  p.views,\n  p.id post_id\nfrom\n  categories c\n  left join lateral (select *\n                     from posts p\n                     where c.id = p.category_id\n                     order by views desc, id\n                     limit 2) p on true\norder by category, views desc, post_id;"
+    },
+    {
+        "kyu": "5",
+        "name": "Relational division: Find all movies two actors cast in together",
+        "link": "https://www.codewars.com/kata/5817b124e7f4576fd00020a2",
+        "query": "select\n  title\nfrom\n  film_actor\n  join film using (film_id)\ngroup by film_id\nhaving array_agg(actor_id) @> array[105, 122]::smallint[]\norder by title;"
+    },
+    {
+        "kyu": "5",
+        "name": "SQL Tuning: Function Calls",
+        "link": "https://www.codewars.com/kata/581fb63e70ca28d92500000d",
+        "query": "select\n  e.employee_id,\n  e.first_name,\n  e.last_name,\n  d.department_name,\n  e.salary AS old_salary,\n  e.salary * (1.1 - (0.05 * (department_id % 2))) new_salary\nfrom\n  employees e\n  natural join departments d\norder by 1;"
+    },
+    {
+        "kyu": "6",
+        "name": "Revenue Analysis with Grouping Sets in PostgreSQL",
+        "link": "https://www.codewars.com/kata/644e21831c0cb6566b89ad27",
+        "query": "select\n  extract(year from p.payment_date)::int \"year\",\n  extract(month from p.payment_date)::int \"month\",\n  c.name category,\n  floor(sum(p.amount))::int revenue\nfrom payment p\njoin rental r using (rental_id)\njoin inventory i using (inventory_id)\njoin film_category f using (film_id)\njoin category c using (category_id)\nwhere extract(year from p.payment_date) = 2007\ngroup by\n  grouping sets (\n    (1, 2, 3),\n    (1, 2),\n    (1)\n  )\norder by 2, 4 desc, 3;"
+    },
+    {
+        "kyu": "6",
+        "name": "The Most Popular Product ",
+        "link": "https://www.codewars.com/kata/649d368a27e215c473e220ba",
+        "query": "select *\nfrom\n  (select distinct\n    o.product_id,\n    p.product_name,\n    count(1) over (partition by p.product_name) count_orders\n  from\n    orders o\n    join products p on p.id = o.product_id\n  order by count_orders desc\n  fetch first 1 row with ties) a\norder by product_id desc;"
+    },
+    {
+        "kyu": "6",
+        "name": "Youngest Team Members",
+        "link": "https://www.codewars.com/kata/6492b17a7c08e4005790053e",
+        "query": "select distinct\n  (array_agg(employee_id) over (partition by team order by birth_date desc))[1] employee_id,\n  (array_agg(full_name) over (partition by team order by birth_date desc))[1] full_name,\n  team,\n  (array_agg(birth_date) over (partition by team order by birth_date desc))[1] birth_date\nfrom employees\norder by team;"
+    },
+    {
+        "kyu": "6",
+        "name": "Ranking students by performance in Math and Science",
+        "link": "https://www.codewars.com/kata/649563164b1bbf004be34cd6",
+        "query": "select\n  row_number() over(order by sum(c.score) desc, s.id) \"rank\",\n  s.id student_id,\n  s.name \"name\",\n  sum(c.score) total_score\nfrom\n  students s\n  join courses c on s.id = c.student_id\nwhere c.course_name in ('Math', 'Science')\ngroup by s.id\norder by total_score desc, s.id;"
+    },
+    {
+        "kyu": "6",
+        "name": "Students who excel in Science over Math",
+        "link": "https://www.codewars.com/kata/649421e15e89dc1ca27e5fb3",
+        "query": "select\n  s.id student_id,\n  name,\n  sum(case\n        when c.course_name = 'Science' then c.score\n        else -c.score\n      end) score_difference\nfrom students s\njoin courses c on c.student_id = s.id\ngroup by s.id\nhaving sum(case\n             when c.course_name = 'Science' then c.score\n             else -c.score\n           end) > 0\norder by 3 desc, 1;"
+    },
+    {
+        "kyu": "7",
+        "name": "The Dunning-Kruger effect",
+        "link": "https://www.codewars.com/kata/649f1fc4771a460058981959",
+        "query": "select\n  id,\n  name,\n  perceived_skill_level - actual_skill_level as skill_overestimation,\n  case\n    when perceived_skill_level - actual_skill_level <= 2 then 'Mild case of overconfidence'\n    when perceived_skill_level - actual_skill_level <= 5 then 'Moderate case of overconfidence'\n    when perceived_skill_level - actual_skill_level <= 7 then 'Serious case of overconfidence'\n    else 'Extreme case of Dunning-Kruger effect detected!'\n  end overconfidence_category\nfrom users\nwhere perceived_skill_level > actual_skill_level\norder by skill_overestimation desc, id desc;"
+    },
+    {
+        "kyu": "7",
+        "name": "Count up the points for the 7 Wonders board game! Easy version",
+        "link": "https://www.codewars.com/kata/5adadcb36edb07df5600092e",
+        "query": "select\n  id,\n  compasses,\n  gears,\n  tablets,\n  (least(compasses, gears, tablets) * 7\n    + power(compasses, 2)\n    + power(gears, 2)\n    + power(tablets, 2))::int as res\nfrom seven_wonders_science;"
+    },
+    {
+        "kyu": "7",
+        "name": "Disemvowel Trolls",
+        "link": "https://www.codewars.com/kata/52fba66badcd10859f00097e",
+        "query": "select\n  str,\n  regexp_replace(str, '[aeiou]', '', 'gi') res\nfrom disemvowel;"
+    }
+]

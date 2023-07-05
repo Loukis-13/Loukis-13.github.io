@@ -1,6 +1,10 @@
 <script setup>
+import { ref } from 'vue'
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import Projeto from '@/components/Projeto.vue'
+
+import queries from '@/assets/SQL_queries.json'
+let query = ref(0);
 
 const url_dados = {
     mvs: 'https://colab.research.google.com/drive/1XqWO1akL_v2Rvve8x1E-qQqvRqnI3kxy?usp=sharing',
@@ -9,10 +13,7 @@ const url_dados = {
     page_view: 'https://colab.research.google.com/drive/11qkOfJlo-8JKne7wPtd39xVINqLYS-vJ?usp=sharing',
     sea_level: 'https://colab.research.google.com/drive/17_eYVYndSfQ5lVeltbytLF2NbBtMluyM?usp=sharing'
 }
-
-function open_dados() {
-    window.open(url_dados[document.getElementById("opcaoAnaliseDeDados").value])
-}
+let dados = ref(url_dados.mvs)
 </script>
 
 <template>
@@ -107,6 +108,30 @@ function open_dados() {
     </Projeto>
 
     <Projeto 
+        nome="Demonstração de SQL"
+        :linguagens="['PostgreSQL', 'SQLite']"
+    >
+        <template v-slot:imagem> 
+            <div v-for="(v, i) in queries">
+                <a v-show="i == query" class="text-3xl lg:text-4xl mb-2 text-blue-500 hover:underline" :href="v.link" target="_blank">{{ v.name }}</a>
+                <pre v-show="i == query" class="w-full aspect-video"><code class="language-sql">{{ v.query }}</code></pre>
+            </div>
+        </template>
+
+        Resoluções de desafios SQL do site CodeWars.
+        A maioria das queries foram escritas para PostgreSQL, algumas para SQLite, 
+        de acordo com as requisições dos desafios.
+        <br />
+        As queries demonstram diversos usos de funções do banco de dados e o link para
+        a descrição do desafio se encontra no título da query.
+        <br />
+        <br />
+        <select class="border border-gray-300 text-gray-900 block w-full p-2" v-model="query">
+            <option v-for="(v, i) in queries" :value="i">{{ v.name }}</option>
+        </select>
+    </Projeto>
+
+    <Projeto 
         nome="RGit" 
         foto="/projetos/rgit/rgit.png"
         repositorio="https://github.com/Loukis-13/RGit"
@@ -158,15 +183,15 @@ function open_dados() {
         Numpy, Pandas, Matplotlib e Seaborn.<br />
         <br />
         <div>
-            <select id="opcaoAnaliseDeDados" class="border border-gray-300 text-gray-900 block w-full p-2">
-                <option value="mvs" selected>Mean Variance Standard-deviation Calculator</option>
-                <option value="medical_data">Medical Data Visualizer</option>
-                <option value="demographic">Demographic Data Analyzer</option>
-                <option value="page_view">Page View Time Series Visualizer</option>
-                <option value="sea_level">Sea Level Predictor</option>
+            <select v-model="dados" class="border border-gray-300 text-gray-900 block w-full p-2">
+                <option :value="url_dados.mvs">Mean Variance Standard-deviation Calculator</option>
+                <option :value="url_dados.medical_data">Medical Data Visualizer</option>
+                <option :value="url_dados.demographic">Demographic Data Analyzer</option>
+                <option :value="url_dados.page_view">Page View Time Series Visualizer</option>
+                <option :value="url_dados.sea_level">Sea Level Predictor</option>
             </select>
             <br />
-            <button class="bg-gray-600 p-2 rounded text-white" @click="open_dados">ABRIR</button>
+            <a class="bg-gray-600 p-2 rounded text-white" :href="dados" target="_blank">ABRIR</a>
         </div>
     </Projeto>
 

@@ -9,11 +9,14 @@
   "dependencies": {
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@splidejs/vue-splide": "^0.6.12",
+    "prism-themes": "^1.9.0",
+    "prismjs": "^1.29.0",
     "vue": "^3.2.38"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.3",
     "autoprefixer": "^10.4.14",
+    "babel-plugin-prismjs": "^2.1.0",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2",
     "vite": "^3.0.9"
