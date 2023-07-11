@@ -61,6 +61,10 @@ const lista_certificacoes = [
         url: 'https://www.codingame.com/certification/7rzgdHCheLMOqWVV4pmRAw'
     },
     {
+        nome: 'Clojure CG',
+        url: 'https://www.codingame.com/certification/TJFzyd8icCuMwul71XlEmw'
+    },
+    {
         nome: 'Coding Speed',
         url: 'https://www.codingame.com/certification/YiWruQpxHnd4p3Uvh3HNMg'
     },
