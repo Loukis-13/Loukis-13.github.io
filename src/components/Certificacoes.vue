@@ -9,6 +9,10 @@ const lista_certificacoes = [
         url: 'https://www.credly.com/badges/57d503c0-2760-4833-8653-a7f6b052c4df/public_url'
     },
     {
+        nome: 'AWS Cloud Quest: Cloud Practitioner',
+        url: 'https://www.credly.com/badges/47f3efb6-1716-4248-8863-5d33a0223fd5/public_url'
+    },
+    {
         nome: 'English Proficiency C1',
         url: 'https://www.credly.com/badges/31d824ed-1614-40af-9390-bd591e675392/public_url'
     },
