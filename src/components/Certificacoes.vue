@@ -57,6 +57,10 @@ const lista_certificacoes = [
         url: 'https://www.codingame.com/certification/lL7ufXJbX-Hpej5hmXB8Rg'
     },
     {
+        nome: 'C++ CG',
+        url: 'https://www.codingame.com/certification/9x6cO-0cqgX1nieKZLSFYA'
+    },
+    {
         nome: 'Java CG',
         url: 'https://www.codingame.com/certification/Nqr7oPdhLmFhY4TsXnGnyw'
     },
