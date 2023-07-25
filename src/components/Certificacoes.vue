@@ -9,6 +9,10 @@ const lista_certificacoes = [
         url: 'https://www.credly.com/badges/57d503c0-2760-4833-8653-a7f6b052c4df/public_url'
     },
     {
+        nome: 'ORACLE - Database Design and Programming with SQL',
+        url: '/#sorry, no verification link, but here is the credential: xf4ecd4df1c3b6dad7f00572be9416aa9cc903669971f6f4d1b303b8eb10110c0'
+    },
+    {
         nome: 'AWS Cloud Quest: Cloud Practitioner',
         url: 'https://www.credly.com/badges/47f3efb6-1716-4248-8863-5d33a0223fd5/public_url'
     },
