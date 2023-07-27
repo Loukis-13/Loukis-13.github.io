@@ -57,8 +57,20 @@ const lista_certificacoes = [
         url: 'https://www.codingame.com/certification/E_wWSv4rLAT_KmRUBkp_kw'
     },
     {
+        nome: 'TypeScript CG',
+        url: 'https://www.codingame.com/certification/nK0oEVdAD4vDQQzQGiO10g'
+    },
+    {
         nome: 'Rust CG',
         url: 'https://www.codingame.com/certification/lL7ufXJbX-Hpej5hmXB8Rg'
+    },
+    {
+        nome: 'GO CG',
+        url: 'https://www.codingame.com/certification/ODCFe0DbHvaIo7SvRxnbzg'
+    },
+    {
+        nome: 'C CG',
+        url: 'https://www.codingame.com/certification/Z5gD-XxUWNYorTNPQ0Xe1g'
     },
     {
         nome: 'C++ CG',
