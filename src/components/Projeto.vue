@@ -3,7 +3,7 @@ defineProps(['nome', 'linguagens', 'foto', 'repositorio', 'pagina'])
 </script>
 
 <template>
-    <div class="grid lg:grid-cols-2 gap-5 px-2 pb-2 w-full bg-neutral-800 even:bg-neutral-600 odd:text-neutral-400 even:text-neutral-950">
+    <div :id="nome" class="grid lg:grid-cols-2 gap-5 px-2 pb-2 w-full bg-neutral-800 even:bg-neutral-600 odd:text-neutral-400 even:text-neutral-950">
         <div class="grid lg:grid-cols-12 mt-2 lg:my-5  overflow-auto">
             <div class="pe-1 grid grid-cols-10 lg:grid-cols-1 auto-rows-min flex items-center">
                 <img v-for="x in linguagens" class="p-1 pb-2 w-96" :src="`/logos/${x}.svg`" :alt="x" :title="x" />

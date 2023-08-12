@@ -114,7 +114,7 @@ const lista_certificacoes = [
 <template>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 flex items-center">
         <a v-for="c in lista_certificacoes" :href="c.url" target="_blank">
-            <img class="" :src="`/certificações/${c.nome}.png`" :alt="c.nome" :title="c.nome" style="padding: 4%;" />
+            <img :src="`/certificações/${c.nome}.png`" :alt="c.nome" :title="c.nome" style="padding: 4%;" />
         </a>
     </div>
 </template>

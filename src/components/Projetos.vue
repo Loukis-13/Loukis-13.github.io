@@ -6,19 +6,41 @@ import Projeto from '@/components/Projeto.vue'
 import queries from '@/assets/SQL_queries.json'
 let query = ref(0);
 
-const url_dados = {
+const urlDados = {
     mvs: 'https://colab.research.google.com/drive/1XqWO1akL_v2Rvve8x1E-qQqvRqnI3kxy?usp=sharing',
-    medical_data: 'https://colab.research.google.com/drive/1gabe6Tdy0SfPBIpHG1_FJ0168imXz7h1?usp=sharing',
+    medicalData: 'https://colab.research.google.com/drive/1gabe6Tdy0SfPBIpHG1_FJ0168imXz7h1?usp=sharing',
     demographic: 'https://colab.research.google.com/drive/1z-AFWAm185-hAy_kAYYNYAuRvFu-9cE_?usp=sharing',
-    page_view: 'https://colab.research.google.com/drive/11qkOfJlo-8JKne7wPtd39xVINqLYS-vJ?usp=sharing',
-    sea_level: 'https://colab.research.google.com/drive/17_eYVYndSfQ5lVeltbytLF2NbBtMluyM?usp=sharing'
+    pageView: 'https://colab.research.google.com/drive/11qkOfJlo-8JKne7wPtd39xVINqLYS-vJ?usp=sharing',
+    seaLevel: 'https://colab.research.google.com/drive/17_eYVYndSfQ5lVeltbytLF2NbBtMluyM?usp=sharing'
 }
-let dados = ref(url_dados.mvs)
+let dados = ref(urlDados.mvs)
+
+let conwayGameBoard = ref(Array(20).fill(null).map(_ => Array(36).fill(false)))
+let play = ref(false)
+
+function conwayGame() {
+    if (play.value) {
+        conwayGameBoard.value = conwayGameBoard.value.map(
+            (l, i) => l.map(
+                (c, j) => {
+                    const x = conwayGameBoard.value.slice(i-(i>0), i+2).map(
+                        (r) => r.slice(j-(j>0), j+2).reduce((a,b) => a+b)
+                    ).reduce((a,b) => a+b)
+
+                    return Number(2 < x && x < 4+c)
+                }
+            )
+        )
+
+        setTimeout(conwayGame, 200)
+    }
+}
+
 </script>
 
 <template>
-    <!-- <Projeto 
-        nome="" 
+    <!-- <Projeto
+        nome=""
         foto=""
         repositorio=""
         pagina=""
@@ -68,6 +90,28 @@ let dados = ref(url_dados.mvs)
     >
         Projeto para calcular a trajetória de raios de luz através de objetos.<br/>
         Desenvolvido com base no conteúdo do livro <a class="text-blue-500" href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank">Ray Tracing in One Weekend</a>
+    </Projeto>
+
+    <Projeto 
+        nome="Conway's game of life"
+        repositorio=""
+        :linguagens="['Javascript']"
+    >
+        <template v-slot:imagem>
+            <div class="aspect-video grid gap-0.5 grid-cols-[repeat(36,minmax(0,1fr))]">
+                <div v-for="(v, i) in conwayGameBoard.flat()" 
+                    :id="'b='+i"
+                    :class="v ? 'bg-black' : 'bg-white'"
+                    @click="conwayGameBoard[Math.floor(i/36)][i%36] = Number(!v)">
+                </div>
+            </div>
+
+            <img class="mx-auto cursor-pointer" :src="`/src/assets/${play ? 'pause' : 'play_arrow'}.svg`" @click="[play = !play, conwayGame()]">
+        </template>
+
+        Uma simples implementação interativa do autómata celular <a class="text-blue-500" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a>.
+        <br>
+        Clica em um quadrado para mudar o seu estado e clica no icone "iniciar" para iniciar o algoritmo.
     </Projeto>
 
     <Projeto 
@@ -184,11 +228,11 @@ let dados = ref(url_dados.mvs)
         <br />
         <div>
             <select v-model="dados" class="border border-gray-300 text-gray-900 block w-full p-2">
-                <option :value="url_dados.mvs">Mean Variance Standard-deviation Calculator</option>
-                <option :value="url_dados.medical_data">Medical Data Visualizer</option>
-                <option :value="url_dados.demographic">Demographic Data Analyzer</option>
-                <option :value="url_dados.page_view">Page View Time Series Visualizer</option>
-                <option :value="url_dados.sea_level">Sea Level Predictor</option>
+                <option :value="urlDados.mvs">Mean Variance Standard-deviation Calculator</option>
+                <option :value="urlDados.medicalData">Medical Data Visualizer</option>
+                <option :value="urlDados.demographic">Demographic Data Analyzer</option>
+                <option :value="urlDados.pageView">Page View Time Series Visualizer</option>
+                <option :value="urlDados.seaLevel">Sea Level Predictor</option>
             </select>
             <br />
             <a class="bg-gray-600 p-2 rounded text-white" :href="dados" target="_blank">ABRIR</a>
