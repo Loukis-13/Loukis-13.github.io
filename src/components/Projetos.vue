@@ -3,9 +3,11 @@ import { ref } from 'vue'
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import Projeto from '@/components/Projeto.vue'
 
+// DEMONSTRAÇÕES DE SQL
 import queries from '@/assets/SQL_queries.json'
 let query = ref(0);
 
+// DEMONSTAÇÕES DE ANÁLISE DE DADOS
 const urlDados = {
     mvs: 'https://colab.research.google.com/drive/1XqWO1akL_v2Rvve8x1E-qQqvRqnI3kxy?usp=sharing',
     medicalData: 'https://colab.research.google.com/drive/1gabe6Tdy0SfPBIpHG1_FJ0168imXz7h1?usp=sharing',
@@ -14,6 +16,10 @@ const urlDados = {
     seaLevel: 'https://colab.research.google.com/drive/17_eYVYndSfQ5lVeltbytLF2NbBtMluyM?usp=sharing'
 }
 let dados = ref(urlDados.mvs)
+
+// CONWAY'S GAME OF LIFE
+import PlayArrowIcon from '@/assets/play_arrow.svg'
+import PauseIcon from '@/assets/pause.svg'
 
 let conwayGameBoard = ref(Array(20).fill(null).map(_ => Array(36).fill(false)))
 let play = ref(false)
@@ -35,7 +41,6 @@ function conwayGame() {
         setTimeout(conwayGame, 200)
     }
 }
-
 </script>
 
 <template>
@@ -73,7 +78,7 @@ function conwayGame() {
     </Projeto>
 
     <Projeto 
-        nome="NES emulator in Rust" 
+        nome="NES EMULATOR IN RUST" 
         foto="/projetos/emulador-nes/Ferris NES.png"
         repositorio="https://github.com/Loukis-13/NES-emulator-in-Rust"
         :linguagens="['Rust']"
@@ -83,7 +88,7 @@ function conwayGame() {
     </Projeto>
 
     <Projeto 
-        nome="Ray Tracing in One Weekend" 
+        nome="RAY TRACING IN ONE WEEKEND" 
         foto="https://raw.githubusercontent.com/Loukis-13/ray-tracing-in-one-weekend/master/images/image-21.png"
         repositorio="https://github.com/Loukis-13/ray-tracing-in-one-weekend"
         :linguagens="['Rust']"
@@ -93,8 +98,8 @@ function conwayGame() {
     </Projeto>
 
     <Projeto 
-        nome="Conway's game of life"
-        repositorio=""
+        nome="CONWAY'S GAME OF LIFE"
+        repositorio="https://github.com/Loukis-13/Loukis-13.github.io/blob/276282ddbbebd499f7068b69753b4bf3037c7b48/src/components/Projetos.vue#L21"
         :linguagens="['Javascript']"
     >
         <template v-slot:imagem>
@@ -106,7 +111,9 @@ function conwayGame() {
                 </div>
             </div>
 
-            <img class="mx-auto cursor-pointer" :src="`/src/assets/${play ? 'pause' : 'play_arrow'}.svg`" @click="[play = !play, conwayGame()]">
+            <img class="mx-auto cursor-pointer" 
+                :src="play ? PauseIcon : PlayArrowIcon" 
+                @click="[play = !play, conwayGame()]">
         </template>
 
         Uma simples implementação interativa do autómata celular <a class="text-blue-500" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a>.
@@ -115,7 +122,7 @@ function conwayGame() {
     </Projeto>
 
     <Projeto 
-        nome="RSA® implementations" 
+        nome="RSA® IMPLEMENTATIONS" 
         foto="/projetos/rsa.png"
         repositorio="https://github.com/Loukis-13/RSA-implementations"
         :linguagens="['Python', 'Rust']"
@@ -138,7 +145,7 @@ function conwayGame() {
     </Projeto>
 
     <Projeto 
-        nome="InterFatecs" 
+        nome="INTERFATECS" 
         foto="/projetos/InterFatecs.png"
         repositorio="https://github.com/Loukis-13/InterFatecs"
         :linguagens="['Python']"
@@ -152,7 +159,7 @@ function conwayGame() {
     </Projeto>
 
     <Projeto 
-        nome="Demonstração de SQL"
+        nome="DEMONSTRAÇÕES DE SQL"
         :linguagens="['PostgreSQL', 'SQLite']"
     >
         <template v-slot:imagem> 
@@ -196,7 +203,7 @@ function conwayGame() {
     </Projeto>
 
     <Projeto 
-        nome="Musical" 
+        nome="MUSICAL" 
         foto="/projetos/musical/musical.png"
         repositorio="https://github.com/Loukis-13/musical-kotlin"
         :linguagens="['Java', 'Kotlin', 'Docker', 'Kafka']"
@@ -207,7 +214,7 @@ function conwayGame() {
     </Projeto>
 
     <Projeto 
-        nome="Currency API" 
+        nome="CURRENCY API" 
         foto="/projetos/go-currency-api/go-currency-api.png"
         repositorio="https://github.com/Loukis-13/currency-API-GO"
         :linguagens="['GO', 'MongoDB']"
@@ -218,7 +225,7 @@ function conwayGame() {
     </Projeto>
 
     <Projeto 
-        nome="DEMONSTAÇÕES DE ANÁLISES DE DADOS" 
+        nome="DEMONSTAÇÕES DE ANÁLISE DE DADOS" 
         foto="/projetos/analise-de-dados/graficos.png"
         repositorio="https://github.com/Loukis-13/FCC_analise_de_dados" 
         :linguagens="['Python']"
@@ -240,7 +247,7 @@ function conwayGame() {
     </Projeto>
 
     <Projeto 
-        nome="Back End Development and APIs" 
+        nome="BACKEND DEVELOPMENT AND APIs" 
         foto="/projetos/FCC_APIs/fcc-apis.png"
         repositorio="https://github.com/Loukis-13/FCC_APIs"
         :linguagens="['Node']"
