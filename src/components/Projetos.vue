@@ -89,7 +89,7 @@ function conwayGame() {
 
     <Projeto 
         nome="RAY TRACING IN ONE WEEKEND" 
-        foto="https://raw.githubusercontent.com/Loukis-13/ray-tracing-in-one-weekend/master/images/image-21.png"
+        foto="https://github.com/Loukis-13/ray-tracing-in-one-weekend/blob/master/images/spheres-0.png?raw=true"
         repositorio="https://github.com/Loukis-13/ray-tracing-in-one-weekend"
         :linguagens="['Rust']"
     >
