@@ -49,6 +49,14 @@ const lista_certificacoes = [
         url: 'https://www.freecodecamp.org/certification/loukis/data-analysis-with-python-v7'
     },
     {
+        nome: 'Foundational C Sharp with Microsoft',
+        url: 'https://www.freecodecamp.org/certification/loukis/foundational-c-sharp-with-microsoft'
+    },
+    {
+        nome: 'Desvendando a Blockchain',
+        url: 'https://www.sp.senai.br/consulta-certificado?qrcode=00022784/5672249'
+    },
+    {
         nome: 'Python 3 CG',
         url: 'https://www.codingame.com/certification/bIiH1wbTcBe59jliDfnkEA'
     },
