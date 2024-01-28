@@ -60,11 +60,14 @@ function conwayGame() {
         pagina="https://loukis-13.github.io/Dungeon-Raiders-Phaser/"
         :linguagens="['Javascript']"
     >
-        Jogo digital criado com base no jogo de cartas <a class="text-blue-500" href="https://www.ludopedia.com.br/jogo/dungeon-raiders" target="_blank">Dungeon Raiders</a>.<br />
-        Inicialmente feito utilizando Kivy para Python e depois migrado para Phaser 3.<br />
-        Versão para um jogador terminada, versão para dois jogadores em desenvolvimento.<br />
+        <i18n-t keypath="dungeonRaiders.description">
+            <a class="text-blue-500" href="https://www.ludopedia.com.br/jogo/dungeon-raiders" target="_blank">Dungeon Raiders</a>
+        </i18n-t>
         <br />
-        <a class="text-blue-500" href="https://loukis-13.github.io/Dungeon-Raiders-Phaser/" target="_blank">JOGAR</a>
+        <br />
+        <a class="text-blue-500" href="https://loukis-13.github.io/Dungeon-Raiders-Phaser/" target="_blank">
+            {{ $t("dungeonRaiders.play") }}
+        </a>
     </Projeto>
 
     <Projeto 
@@ -73,8 +76,7 @@ function conwayGame() {
         repositorio="https://github.com/Loukis-13/Loukis-13.github.io"
         :linguagens="['Javascript', 'Node', 'Vue', 'Vitejs', 'Tailwind']"
     >
-        Meu espaço pessoal para expor meus projetos.<br/>
-        Feito com <a class="text-blue-500" href="https://vuejs.org/" target="_blank">Vue.js</a>.
+        {{ $t("thisSite.description") }} <a class="text-blue-500" href="https://vuejs.org/" target="_blank">Vue.js</a>.
     </Projeto>
 
     <Projeto 
@@ -83,8 +85,9 @@ function conwayGame() {
         repositorio="https://github.com/Loukis-13/NES-emulator-in-Rust"
         :linguagens="['Rust']"
     >
-        Emulador do vide-game NES (Nintendo Entertainment System) escrito em Rust<br/>
-        Desenvolvido com base no conteúdo do livro <a class="text-blue-500" href="https://bugzmanov.github.io/nes_ebook/chapter_1.html" target="_blank">NES Ebook</a>
+        <i18n-t keypath="nesEmulatorInRust.description">
+            <a class="text-blue-500" href="https://bugzmanov.github.io/nes_ebook/chapter_1.html" target="_blank">NES Ebook</a>
+        </i18n-t>
     </Projeto>
 
     <Projeto 
@@ -93,8 +96,9 @@ function conwayGame() {
         repositorio="https://github.com/Loukis-13/ray-tracing-in-one-weekend"
         :linguagens="['Rust']"
     >
-        Projeto para calcular a trajetória de raios de luz através de objetos.<br/>
-        Desenvolvido com base no conteúdo do livro <a class="text-blue-500" href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank">Ray Tracing in One Weekend</a>
+        <i18n-t keypath="rayTracingInOneWeekend.description">
+            <a class="text-blue-500" href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank">Ray Tracing in One Weekend</a>
+        </i18n-t>
     </Projeto>
 
     <Projeto 
@@ -116,6 +120,10 @@ function conwayGame() {
                 @click="[play = !play, conwayGame()]">
         </template>
 
+        <i18n-t keypath="conwaysGameOfLife.description">
+            <a class="text-blue-500" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">Conway's Game of Life</a>
+        </i18n-t>
+
         Uma simples implementação interativa do autómata celular <a class="text-blue-500" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a>.
         <br>
         Clica em um quadrado para mudar o seu estado e clica no icone "iniciar" para iniciar o algoritmo.
@@ -127,9 +135,7 @@ function conwayGame() {
         repositorio="https://github.com/Loukis-13/RSA-implementations"
         :linguagens="['Python', 'Rust']"
     >
-        Implementações do algoritmo RSA em diferentes linguagens utilizando diferentes bibliotecas, 
-        com a implementação mais eficiente sendo em Python usando a biblioteca gmpy2, 
-        conseguindo gerar chaves de 4096 em menos de 1 segundo e 10000 bits em 1 minuto e 50 segundos.
+        {{ $t("rsaImplementations.description") }}
     </Projeto>
 
     <Projeto 
@@ -139,9 +145,9 @@ function conwayGame() {
         pagina="https://loukis-13.github.io/Forex-Trading/"
         :linguagens="['Javascript', 'Node', 'React', 'Nextjs', 'Tailwind']"
     >
-        Aplicação checar a taxa de cambio entre multiplas moedas fácilmente.<br/>
-        <br/>
-        Dados monetários extraídos de <a class="text-blue-500" href="https://exchangerate.host/" target="_blank">exchangerate.host</a><br/>
+        <i18n-t keypath="forexTrading.description">
+            <a class="text-blue-500" href="https://exchangerate.host/" target="_blank">exchangerate.host</a>
+        </i18n-t>
     </Projeto>
 
     <Projeto 
@@ -150,12 +156,9 @@ function conwayGame() {
         repositorio="https://github.com/Loukis-13/InterFatecs"
         :linguagens="['Python']"
     >
-        Repositório de Problemas da Maratona de Programação <a class="text-blue-500" href="https://interfatecs.com.br/" target="_blank">InterFatecs</a>.
-        <br/>
-        No momento o repositório contém os problemas das maratonas de 2021 a 2023.
-        <br/>
-        <br/>
-        Participei da maratona de 2022, ficando em 5° lugar e agora participo da maratona de 2023.
+        <i18n-t keypath="interfatecs.description">
+            <a class="text-blue-500" href="https://interfatecs.com.br/" target="_blank">InterFatecs</a>
+        </i18n-t>
     </Projeto>
 
     <Projeto 
@@ -169,13 +172,7 @@ function conwayGame() {
             </div>
         </template>
 
-        Resoluções de desafios SQL do site CodeWars.
-        A maioria das queries foram escritas para PostgreSQL, algumas para SQLite, 
-        de acordo com as requisições dos desafios.
-        <br />
-        As queries demonstram diversos usos de funções do banco de dados e o link para
-        a descrição do desafio se encontra no título da query.
-        <br />
+        {{ $t("sqlDemonstrations.description") }}
         <br />
         <select class="border border-gray-300 text-gray-900 block w-full p-2" v-model="query">
             <option v-for="(v, i) in queries" :value="i">{{ v.name }}</option>
@@ -188,7 +185,7 @@ function conwayGame() {
         repositorio="https://github.com/Loukis-13/RGit"
         :linguagens="['Ruby']"
     >
-        Simples implementação da ferramenta Git em Ruby para apender os básicos da linguagem
+        {{ $t("rgit.description") }}
     </Projeto>
 
     <Projeto 
@@ -197,9 +194,7 @@ function conwayGame() {
         repositorio="https://github.com/Loukis-13/desafio-fullstack-sifat"
         :linguagens="['Python', 'Javascript', 'Vue']"
     >
-        Blog com sistema CRUD, composto por Django Framework no backend e VueJS no Frontend.<br/>
-        <br/>
-        O Blog possui um sistema de curtidas de cada post e criação/modificação/deleção de posts, sendo as duas funcionalidades feitas sem que haja atualização das páginas do sistema, por meio de chamadas assíncronas ao backend.
+        {{ $t("desafioFullstackSifat.description") }}
     </Projeto>
 
     <Projeto 
@@ -208,9 +203,10 @@ function conwayGame() {
         repositorio="https://github.com/Loukis-13/musical-kotlin"
         :linguagens="['Java', 'Kotlin', 'Docker', 'Kafka']"
     >
-        Micro-APIs para implementar um fluxo com banco de dados, OpenFeign para requesições en tre APIs, Kafka para mensageria e Docker Composer para orquestrar todos os serviços.<br/>
+        {{ $t("musical.description") }}
         <br/>
-        <a class="text-blue-500" href="https://github.com/Loukis-13/musical">Versão em Java</a>
+        <br/>
+        <a class="text-blue-500" href="https://github.com/Loukis-13/musical">{{ $t("musical.versionInJava") }}</a>
     </Projeto>
 
     <Projeto 
@@ -219,9 +215,7 @@ function conwayGame() {
         repositorio="https://github.com/Loukis-13/currency-API-GO"
         :linguagens="['GO', 'MongoDB']"
     >
-        API para realizar trocas entre moedas<br/>
-        <br/>
-        Desenvolvida utilizando GOlang para back-end e MongoDB para banco de dados
+        {{ $t("currencyApi.description") }}
     </Projeto>
 
     <Projeto 
@@ -230,8 +224,8 @@ function conwayGame() {
         repositorio="https://github.com/Loukis-13/FCC_analise_de_dados" 
         :linguagens="['Python']"
     >
-        Algoritimos de análise, manipulação, criação e transformação de dados, feitos em Python usando as bibliotecas
-        Numpy, Pandas, Matplotlib e Seaborn.<br />
+        {{ $t("dataAnalisysDemonstrations.description") }}
+        <br />
         <br />
         <div>
             <select v-model="dados" class="border border-gray-300 text-gray-900 block w-full p-2">
@@ -252,7 +246,7 @@ function conwayGame() {
         repositorio="https://github.com/Loukis-13/FCC_APIs"
         :linguagens="['Node']"
     >
-        APIs desenvolvidas para a certificação do curso "APIs and Microservices" da Free Code Camp.<br/>
+        {{ $t("backendDevepmentAndApis.description") }}
         <!-- Escritas Node.js e implementadas na plataforma do Heroku, todas as APIs foram reunidas em um único app para melhor manueseio. -->
     </Projeto>
 
@@ -269,8 +263,7 @@ function conwayGame() {
             </Splide>
         </template>
 
-        O objetivo deste projeto é facilitar e agilizar a compra de produtos nas cantinas escolares para diminuir o tempo gasto em filas.<br/>
-        Feito utilizando Django para o Back-end, Materialize css para o Front-end e mySQL para o banco de dados.
+        {{ $t("nossaCantina.description") }}
     </Projeto>
 
     <Projeto 
@@ -279,13 +272,13 @@ function conwayGame() {
         repositorio="https://github.com/Loukis-13/leitor_agil"
         :linguagens="['Flutter', 'Dart']"
     >
-        Aplicativo para mobiles para ajudar a ler arquivos e documentos rápidamente.<br/>
-        Primeiramente feito utilizando Kivy para Python e depois atualizado para Flutter.<br/>
+        {{ $t("agileReader.description") }}
         <br/>
-        <a class="text-blue-500" href="https://github.com/Loukis-13/Leitor-agil" target="_blank">Versão em Python</a>
+        <br/>
+        <a class="text-blue-500" href="https://github.com/Loukis-13/Leitor-agil" target="_blank">{{ $t("agileReader.versionInPython") }}</a>
     </Projeto>
 
-    <Projeto 
+    <!-- <Projeto 
         nome="GESSO MORRO AGUDO" 
         foto="/projetos/gesso/gesso.png"
         repositorio="https://github.com/Loukis-13/gesso-morro-agudo"
@@ -293,7 +286,7 @@ function conwayGame() {
         :linguagens="['Python', 'Javascript']"
     >
         Catálogo simples que extrai os dados de um csv<br/>
-    </Projeto>
+    </Projeto> -->
 
     <Projeto 
         nome="FRASES CÔMICAS DOS PRESIDENTES" 
@@ -302,7 +295,6 @@ function conwayGame() {
         pagina="https://loukis-13.github.io/frases_presidentes/"
         :linguagens="['Python']"
     >
-        Microserviço para servir as frases mais cômicas dos presidentes do Brasil<br/>
-        Feito utilizando Flask para Python<br/>
+        {{ $t("frasesComicasDosPresidentes.description") }}
     </Projeto>
 </template>

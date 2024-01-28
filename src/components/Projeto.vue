@@ -18,15 +18,15 @@ defineProps(['nome', 'linguagens', 'foto', 'repositorio', 'pagina'])
             <div class="grid grid-cols-12 lg:my-5">
                 <div>
                     <a v-if="pagina" :href="pagina" target="_blank">
-                        <img class="bg-blend-white" src="@/assets/redirect.svg" title="Visitar página" />
+                        <img class="bg-blend-white" src="@/assets/redirect.svg" :title="$t('visitPage')" />
                     </a>
                 </div>
                 <h2 class="text-3xl lg:text-4xl mb-2 col-span-10">{{ nome }}</h2>
                 <a :href="repositorio" target="_blank">
-                    <img v-if="repositorio" src="/redes-sociais/github.svg" title="Código no GitHub" />
+                    <img v-if="repositorio" src="/redes-sociais/github.svg" :title="$t('codeOnGithub')" />
                 </a>
             </div>
-            <div class="text-xl">
+            <div class="text-xl whitespace-pre-line">
                 <slot></slot>
             </div>
         </div>
