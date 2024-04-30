@@ -23,8 +23,10 @@ export default {
             Developed following the book {0}.`
     },
     conwaysGameOfLife: {
-        description: `A simple interactive implementation of the celular automata {0}.
-            Click on a square to change its state, and click on the "play" icon to start the algorithm.`
+        description: `A simple interactive implementation of the celular automata {0} written in Rust and compiled to WebAssembly.
+            Click on a square to change its state, and click on the "play" icon to start the algorithm.
+            Hold "ctrl" and click in a square to create a "pulsar".
+            Hold "shift" and click in a square to create a "glider".`
     },
     rsaImplementations: {
         description: `Implementations of the RSA algorithm in different languages using different libraries, with the most efficient implementation being in python using the gymp2 lib, being able to generate key of 4096 bits in less than one second and 10000 bits in 1 minute and 50 seconds.`

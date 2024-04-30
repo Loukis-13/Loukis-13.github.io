@@ -18,7 +18,7 @@ defineProps(['nome', 'linguagens', 'foto', 'repositorio', 'pagina'])
             <div class="grid grid-cols-12 lg:my-5">
                 <div>
                     <a v-if="pagina" :href="pagina" target="_blank">
-                        <img class="bg-blend-white" src="@/assets/redirect.svg" :title="$t('visitPage')" />
+                        <img class="bg-blend-white" src="@/assets/icons/redirect.svg" :title="$t('visitPage')" />
                     </a>
                 </div>
                 <h2 class="text-3xl lg:text-4xl mb-2 col-span-10">{{ nome }}</h2>

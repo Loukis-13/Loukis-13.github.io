@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import Projeto from '@/components/Projeto.vue'
 
@@ -18,29 +18,13 @@ const urlDados = {
 let dados = ref(urlDados.mvs)
 
 // CONWAY'S GAME OF LIFE
-import PlayArrowIcon from '@/assets/play_arrow.svg'
-import PauseIcon from '@/assets/pause.svg'
-
-let conwayGameBoard = ref(Array(20).fill(null).map(_ => Array(36).fill(false)))
-let play = ref(false)
-
-function conwayGame() {
-    if (play.value) {
-        conwayGameBoard.value = conwayGameBoard.value.map(
-            (l, i) => l.map(
-                (c, j) => {
-                    const x = conwayGameBoard.value.slice(i-(i>0), i+2).map(
-                        (r) => r.slice(j-(j>0), j+2).reduce((a,b) => a+b)
-                    ).reduce((a,b) => a+b)
-
-                    return Number(2 < x && x < 4+c)
-                }
-            )
-        )
-
-        setTimeout(conwayGame, 200)
-    }
-}
+import PlayIcon from '@/assets/icons/play_arrow.svg'
+import RestartIcon from '@/assets/icons/restart.svg'
+import ClearIcon from '@/assets/icons/clear.svg'
+onMounted(() => {
+    import('@/assets/game_of_life/index.js')
+})
+const conwayGameOfLifeFps = ref(10);
 </script>
 
 <template>
@@ -104,29 +88,28 @@ function conwayGame() {
     <Projeto 
         nome="CONWAY'S GAME OF LIFE"
         repositorio="https://github.com/Loukis-13/Loukis-13.github.io/blob/276282ddbbebd499f7068b69753b4bf3037c7b48/src/components/Projetos.vue#L21"
-        :linguagens="['Javascript']"
+        :linguagens="['Javascript', 'Rust', 'WebAssembly']"
     >
         <template v-slot:imagem>
-            <div class="aspect-video grid gap-0.5 grid-cols-[repeat(36,minmax(0,1fr))]">
-                <div v-for="(v, i) in conwayGameBoard.flat()" 
-                    :id="'b='+i"
-                    :class="v ? 'bg-black' : 'bg-white'"
-                    @click="conwayGameBoard[Math.floor(i/36)][i%36] = Number(!v)">
+            <canvas id="game-of-life-canvas" class="aspect-video w-full"></canvas>
+            <div class="flex justify-between items-center">
+                <div class="flex justify-between w-1/2">
+                    <p>FPS</p>
+                    <input id="fps-control" type="range" min="10" max="60" v-model="conwayGameOfLifeFps">
+                    <p>{{ conwayGameOfLifeFps }}</p>
+                </div>
+                
+                <div class="flex justify-around w-1/2 px-8">
+                    <img id="play-pause" class="cursor-pointer aspect-square" :src="PlayIcon">
+                    <img id="restart" class="cursor-pointer aspect-square" :src="RestartIcon">
+                    <img id="kill-all" class="cursor-pointer aspect-square" :src="ClearIcon">
                 </div>
             </div>
-
-            <img class="mx-auto cursor-pointer" 
-                :src="play ? PauseIcon : PlayArrowIcon" 
-                @click="[play = !play, conwayGame()]">
         </template>
 
         <i18n-t keypath="conwaysGameOfLife.description">
             <a class="text-blue-500" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">Conway's Game of Life</a>
         </i18n-t>
-
-        Uma simples implementação interativa do autómata celular <a class="text-blue-500" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a>.
-        <br>
-        Clica em um quadrado para mudar o seu estado e clica no icone "iniciar" para iniciar o algoritmo.
     </Projeto>
 
     <Projeto 

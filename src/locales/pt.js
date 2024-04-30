@@ -22,8 +22,10 @@ export default {
             Desenvolvido com base no conteúdo do livro {0}.`
     },
     conwaysGameOfLife: {
-        description: `Uma simples implementação interativa do autómata celular {0}.
-            Clica em um quadrado para mudar o seu estado e clica no icone "iniciar" para iniciar o algoritmo.`
+        description: `Uma simples implementação interativa do autómata celular {0} escrita em Rust e compilada para WebAssembly.
+            Clica em um quadrado para mudar o seu estado e clica no icone "iniciar" para iniciar o algoritmo.
+            Segura "ctrl" e clica em um quadrado para criar um "pulsar".
+            Segura "shift" e clica em um quadrado para criar um "planador".`
     },
     rsaImplementations: {
         description: `Implementações do algoritmo RSA em diferentes linguagens utilizando diferentes bibliotecas, com a implementação mais eficiente sendo em Python usando a biblioteca gmpy2, conseguindo gerar chaves de 4096 em menos de 1 segundo e 10000 bits em 1 minuto e 50 segundos.`
